@@ -1,0 +1,107 @@
+/* src/pages/index.module.css */
+
+/* ... your existing .heroBanner styles (should be updated as per previous advice) ... */
+/* Example for .heroBanner if you made it custom: */
+.heroBanner {
+  padding: 2rem 0; /* Example: reduced padding */
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--ifm-color-primary-lightest); /* Your new background */
+  color: var(--ifm-font-color-base); /* Ensure text is readable */
+}
+
+[data-theme='dark'] .heroBanner {
+  background-color: var(--ifm-color-primary-darkest);
+  color: var(--ifm-font-color-base);
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 1.5rem; /* Example: reduced padding for mobile */
+  }
+}
+
+/* Example styles for new classes in HomepageHeader, if you added them */
+.resumeName {
+  /* Define styles for your name in the header */
+  /* e.g., font-size: 2.5rem; margin-bottom: 0.5rem; */
+}
+.resumeProfessionalTitle {
+  /* Define styles for your professional title in the header */
+  /* e.g., font-size: 1.2rem; color: var(--ifm-color-secondary-darkest); */
+}
+
+
+/* Remove or comment out .buttons if it's no longer used */
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* --- New styles for resume content --- */
+.resumeMainContent {
+  padding: 2rem 1rem;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.resumeSection {
+  margin-bottom: 2.5rem;
+}
+
+.sectionHeading {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: var(--ifm-color-primary-dark); /* Example */
+}
+
+.summaryText {
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.skillsList {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.skillItem {
+  background-color: var(--ifm-color-secondary-lightest);
+  color: #212121;
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px; /* Example of slightly rounded corners for skill "pills" */
+  font-size: 0.9rem;
+}
+
+.companyName {
+  font-size: 1.4rem; /* Or your preferred size */
+  color: var(--ifm-color-emphasis-800);
+  margin-bottom: 0.5rem; /* Remove bottom margin if any, as .entryHeader handles spacing */
+}
+
+.jobRole {
+  margin-bottom: 1.5rem;
+  padding-left: 1rem; /* Still useful for indenting roles under a company */
+}
+
+.roleTitle {
+  font-size: 1.2rem; /* Or your preferred size */
+  color: var(--ifm-color-emphasis-800);
+  margin-bottom: 0.25rem; /* Remove bottom margin if any */
+}
+
+/* Ensure styles for .responsibilitiesLabel, .responsibilitiesList, .responsibilityItem are also defined */
+.responsibilitiesLabel {
+  font-weight: bold;
+  margin-top: 0.5rem; /* Add some space above responsibilities label */
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+/* ... any other styles you need ... */
