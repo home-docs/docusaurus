@@ -100,7 +100,7 @@ export default function Home(): ReactNode {
           title: 'Senior Analyst (SDE II)',
           dates: 'March 2017 – October 2018',
           responsibilities: [
-            'Developed and maintained "Direct Commerce," an in-house supply chain management and billing platform, which was instrumental in distributing globally recognized magazines such as National Geographic, People, and Sports Illustrated to hundreds of thousands of individuals worldwide.',
+            'Developed and maintained "Direct Commerce" an in-house supply chain management and billing platform, which was instrumental in distributing globally recognized magazines such as National Geographic, People, and Sports Illustrated to hundreds of thousands of individuals worldwide.',
             'Extracted data from diverse sources, including Oracle, Direct Commerce, and other applications, to generate insightful reports for stakeholders in the business, sales, and finance sectors.',
             'Collaborated as a dedicated member of the development team and contributed to both ongoing development and enhancement tasks.',
             'Conducted peer code testing for fellow developers to ensure code quality and consistency.',
