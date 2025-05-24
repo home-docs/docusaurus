@@ -61,8 +61,8 @@ const config: Config = {
       },
       items: [
         {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
+          href: 'https://www.linkedin.com/in/mnik28/',
+          label: 'LinkedIn',
           position: 'right',
         },
       ],
