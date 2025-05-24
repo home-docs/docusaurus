@@ -5,26 +5,27 @@
  */
 
 /* You can override the default Infima variables here. */
+/* Light Mode - McLaren Papaya Orange */
 :root {
-  --ifm-color-primary: #E57373;
-  --ifm-color-primary-dark: #EF5350;
-  --ifm-color-primary-darker: #F44336;
-  --ifm-color-primary-darkest: #E53935;
-  --ifm-color-primary-light: #EF9A9A;
-  --ifm-color-primary-lighter: #FFCDD2;
-  --ifm-color-primary-lightest: #FFEBEE;
+  --ifm-color-primary: #FF8700; /* A strong Papaya Orange */
+  --ifm-color-primary-dark: #F57C00; /* Slightly deeper, still vibrant */
+  --ifm-color-primary-darker: #E67000; /* More saturated depth */
+  --ifm-color-primary-darkest: #D35400; /* Strongest orange, good for contrast */
+  --ifm-color-primary-light: #FFAA4D; /* A bit lighter, retains vibrancy */
+  --ifm-color-primary-lighter: #FFC180; /* Softer, good for backgrounds/highlights */
+  --ifm-color-primary-lightest: #FFD6B3; /* Palest papaya, for subtle touches */
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.08); /* A bit more noticeable to match vibrancy */
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* Dark Mode - Fluorescent Green */
 [data-theme='dark'] {
-  --ifm-color-primary: #7986CB;
-  --ifm-color-primary-dark: #5C6BC0;
-  --ifm-color-primary-darker: #3F51B5;
-  --ifm-color-primary-darkest: #3949AB;
-  --ifm-color-primary-light: #9FA8DA;
-  --ifm-color-primary-lighter: #C5CAE9;
-  --ifm-color-primary-lightest: #E8EAF6;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-color-primary: #39FF14; /* Bright Fluorescent Green (aka "Neon Green") */
+  --ifm-color-primary-dark: #2EFF0D; /* Slightly more saturated/deeper neon */
+  --ifm-color-primary-darker: #25E80C; /* Richer neon */
+  --ifm-color-primary-darkest: #1DCC0A; /* Deepest neon, for strong accents if needed */
+  --ifm-color-primary-light: #6BFF57; /* Lighter, slightly softer neon */
+  --ifm-color-primary-lighter: #98FF8A; /* Good for text or less intense highlights */
+  --ifm-color-primary-lightest: #C2FFBC; /* Palest neon, for subtle backgrounds or hover effects */
+  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.15); /* Brighter highlight to match neon */
 }

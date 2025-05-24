@@ -104,4 +104,95 @@
   font-size: 1rem;
 }
 
+/* In src/pages/index.module.css */
+.educationEntry {
+  margin-bottom: 1.5rem;
+  padding-left: 1rem; /* Initial indent for the whole education entry */
+}
+
+.degreeName {
+  font-size: 1.3rem;
+  color: var(--ifm-color-emphasis-800);
+  margin-bottom: 0.25rem;
+}
+
+.educationDetails { /* This new class provides the further indent */
+  padding-left: 1rem; /* Additional indent for institution and description */
+}
+
+.institutionName {
+  font-size: 1rem;
+  color: var(--ifm-color-emphasis-700);
+  margin-bottom: 0.25rem;
+}
+
+.educationDescription {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-top: 0.5rem;
+  color: var(--ifm-font-color-secondary);
+}
+
+/* src/pages/index.module.css */
+
+/* ... (your existing styles) ... */
+
+/* --- Styles for Certifications Section --- */
+.certificationsContainer {
+  display: grid; /* Example: Use grid for a nice layout */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid columns */
+  gap: 1.5rem; /* Space between certification entries */
+}
+
+.certificationEntry {
+  display: flex; /* Align thumbnail and text side-by-side */
+  align-items: flex-start; /* Align items to the top */
+  gap: 1rem; /* Space between thumbnail and text info */
+  padding: 1rem; /* Padding inside each certification entry */
+  border: 1px solid var(--ifm-color-emphasis-300); /* Optional border */
+  border-radius: var(--ifm-global-radius); /* Optional rounded corners */
+  background-color: var(--ifm-background-surface-color); /* Optional subtle background */
+}
+
+.certificationThumbnail {
+  width: 80px;  /* Adjust size as needed */
+  height: 80px; /* Adjust size as needed */
+  object-fit: contain; /* Ensures the image fits well without distortion */
+  flex-shrink: 0; /* Prevents image from shrinking if text is long */
+  /* border: 1px solid var(--ifm-color-emphasis-200); /* Optional border for the image */
+  /* border-radius: 4px; */
+}
+
+.certificationInfo {
+  display: flex;
+  flex-direction: column; /* Stack name and issuer vertically */
+}
+
+.certificationName {
+  font-size: 1.15rem; /* Adjust as needed */
+  margin-bottom: 0.25rem;
+  color: var(--ifm-color-primary); /* Example: use primary color for cert name */
+}
+
+.certificationIssuer {
+  font-size: 0.9rem;
+  color: var(--ifm-font-color-secondary);
+  margin-bottom: 0;
+}
+
+.certificationLink {
+  display: inline-block; /* Helps if you need to apply margins or ensure it behaves like a block for layout */
+  text-decoration: none; /* Removes underline if any browser adds it by default to image links */
+  /* border: none; */ /* Removes border if any browser adds it by default to image links */
+}
+
+.certificationThumbnail {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  flex-shrink: 0;
+  /* If you want a hover effect on the thumbnail itself: */
+  /* transition: transform 0.2s ease-in-out; */
+}
+
 /* ... any other styles you need ... */
