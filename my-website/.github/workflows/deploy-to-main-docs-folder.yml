@@ -1,0 +1,41 @@
+name: Deploy Docusaurus Site to /docs on main
+
+on:
+  push:
+    branches:
+      - main # Triggers the workflow on pushes to the main branch
+  workflow_dispatch: # Allows manual triggering from the Actions tab
+
+jobs:
+  deploy:
+    name: Build and Deploy to /docs folder
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Required to push changes back to the main branch's /docs folder
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18' # Or your preferred Node.js version
+          cache: 'yarn' # Or 'npm' or 'pnpm' based on your project
+
+      - name: Install Docusaurus dependencies
+        run: yarn install --frozen-lockfile # Or npm ci or pnpm install --frozen-lockfile
+
+      - name: Build Docusaurus website
+        run: yarn build # Or npm run build or pnpm build
+                       # This creates the static site in the './build' directory
+
+      - name: Deploy built site to /docs folder on main branch
+        uses: JamesIves/github-pages-deploy-action@v4.6.3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }} # GITHUB_TOKEN is automatically provided
+          branch: main                     # The branch to update
+          folder: build                    # The directory containing the Docusaurus build output
+          target-folder: docs              # The target directory on the 'main' branch for deployment
+          clean: true                      # Remove existing files from 'target-folder' before deploying
+          # Optional: Customize the commit message
+          # commit-message: "Deploy: Build and deploy Docusaurus site to /docs folder"
