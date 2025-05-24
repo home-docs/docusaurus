@@ -1,4 +1,4 @@
-name: Deploy Docusaurus Site to /docs on main (from my-website subdir)
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -7,39 +7,44 @@ on:
   workflow_dispatch: # Allows manual triggering from the Actions tab
 
 jobs:
-  deploy:
-    name: Build and Deploy to /docs folder
+  build:
+    name: Build Docusaurus
     runs-on: ubuntu-latest
-    permissions:
-      contents: write # Required to push changes back to the main branch's /docs folder
     steps:
-      - name: Checkout main branch
-        uses: actions/checkout@v4
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
         with:
-          node-version: '18' # Or your preferred Node.js version
-          cache: 'yarn'     # Or 'npm' or 'pnpm' depending on your project
-          # Point cache to the lock file inside your Docusaurus project subdirectory
-          cache-dependency-path: my-website/yarn.lock # Or package-lock.json / pnpm-lock.yaml
-
-      - name: Install Docusaurus dependencies
-        run: yarn install --frozen-lockfile # Or npm ci or pnpm install --frozen-lockfile
-        working-directory: ./my-website   # ===> Run this command inside the 'my-website' directory
-
-      - name: Build Docusaurus website
-        run: yarn build # Or npm run build or pnpm build
-        working-directory: ./my-website   # ===> Run this command inside the 'my-website' directory
-                                          # Build output will be in ./my-website/build
-
-      - name: Deploy built site to /docs folder on main branch
-        uses: JamesIves/github-pages-deploy-action@v4.6.3
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          branch: main                     # The branch to update
-          folder: ./my-website/build       # ===> Path to the build output, relative to repository root
-          target-folder: docs              # The target directory on the 'main' branch for deployment
-          clean: true                      # Remove existing files from 'target-folder' before deploying
-          # Optional: Customize the commit message
-          # commit-message: "Deploy: Build and deploy Docusaurus site to /docs folder from my-website"
+          node-version: 18
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+      - name: Build website
+        run: npm run build
+
+      - name: Upload Build Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: build
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: build
+
+    # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
+    permissions:
+      pages: write # to deploy to Pages
+      id-token: write # to verify the deployment originates from an appropriate source
+
+    # Deploy to the github-pages environment
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
