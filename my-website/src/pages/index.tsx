@@ -161,14 +161,14 @@ export default function Home(): ReactNode {
       issuer: 'Scrum.org',
       thumbnailUrl: 'https://scrumorg-website-prod.s3.amazonaws.com/drupal/inline-images/2022-09/asset_44psmi_0.png',
       badgeUrl: 'https://www.credly.com/badges/3010c0bf-8ac9-4659-b798-497421f995ae/public_url',
-      altText: 'Professional Scrum Master I Badge'
+      altText: 'Professional Scrum Master I'
     },
     {
       name: 'Microsoft Certified: Azure Fundamentals (AZ-900)',
       issuer: 'Microsoft',
       thumbnailUrl: 'https://learn.microsoft.com/ja-jp/media/learn/certification/badges/microsoft-certified-fundamentals-badge.svg',
       badgeUrl: 'https://learn.microsoft.com/api/credentials/share/en-in/marathenikhil28/65954A8186F59E98?sharingId=43ED59A1D003A46B',
-      altText: 'Microsoft Certified Azure Fundamentals Badge'
+      altText: 'Microsoft Certified Azure Fundamentals'
     },
     // Add more certifications here
   ];
