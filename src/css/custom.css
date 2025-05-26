@@ -6,26 +6,27 @@
 
 /* You can override the default Infima variables here. */
 /* Light Mode - McLaren Papaya Orange */
+/* Light Mode - Cyber Teal */
 :root {
-  --ifm-color-primary: #FF8700; /* A strong Papaya Orange */
-  --ifm-color-primary-dark: #F57C00; /* Slightly deeper, still vibrant */
-  --ifm-color-primary-darker: #E67000; /* More saturated depth */
-  --ifm-color-primary-darkest: #D35400; /* Strongest orange, good for contrast */
-  --ifm-color-primary-light: #FFAA4D; /* A bit lighter, retains vibrancy */
-  --ifm-color-primary-lighter: #FFC180; /* Softer, good for backgrounds/highlights */
-  --ifm-color-primary-lightest: #FFD6B3; /* Palest papaya, for subtle touches */
+  --ifm-color-primary: #00C2CB; /* A bright, clean teal */
+  --ifm-color-primary-dark: #00A9B4;
+  --ifm-color-primary-darker: #0093A0;
+  --ifm-color-primary-darkest: #007D8A;
+  --ifm-color-primary-light: #33D0D8;
+  --ifm-color-primary-lighter: #66DEE3;
+  --ifm-color-primary-lightest: #99EBF0;
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.08); /* A bit more noticeable to match vibrancy */
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.07);
 }
 
-/* Dark Mode - Fluorescent Green */
+/* Dark Mode - Electric Pink/Magenta */
 [data-theme='dark'] {
-  --ifm-color-primary: #39FF14; /* Bright Fluorescent Green (aka "Neon Green") */
-  --ifm-color-primary-dark: #2EFF0D; /* Slightly more saturated/deeper neon */
-  --ifm-color-primary-darker: #25E80C; /* Richer neon */
-  --ifm-color-primary-darkest: #1DCC0A; /* Deepest neon, for strong accents if needed */
-  --ifm-color-primary-light: #6BFF57; /* Lighter, slightly softer neon */
-  --ifm-color-primary-lighter: #98FF8A; /* Good for text or less intense highlights */
-  --ifm-color-primary-lightest: #C2FFBC; /* Palest neon, for subtle backgrounds or hover effects */
-  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.15); /* Brighter highlight to match neon */
+  --ifm-color-primary: #FF007A; /* A vibrant, electric pink/magenta */
+  --ifm-color-primary-dark: #E6006E;
+  --ifm-color-primary-darker: #CC0062;
+  --ifm-color-primary-darkest: #B30056;
+  --ifm-color-primary-light: #FF3395;
+  --ifm-color-primary-lighter: #FF66B0;
+  --ifm-color-primary-lightest: #FF99CB;
+  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.12); /* Slightly more pop for this style */
 }
