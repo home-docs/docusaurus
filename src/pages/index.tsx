@@ -51,17 +51,15 @@ export default function Home(): ReactNode {
             <FeatureCard
               title="Documentation"
               description="Explore projects, configurations, and experiments from my home lab, and notes on this Docusaurus site setup."
-              linkTo="/docs/intro" // Links to your existing docs intro
-              linkText="View Documentation"
-            />
+              linkTo="/docs/documentation" // Links to your existing docs intro
+              linkText="View Documentation" children={undefined}            />
 
             {/* Card 2: Resume */}
             <FeatureCard
               title="Professional Resume"
               description="View my skills, experience, and certifications."
               linkTo="/resume" // Path to your resume page
-              linkText="View Resume"
-            />
+              linkText="View Resume" children={undefined}            />
 
             {/* Removed "My Docusaurus Journey" and "Connect with Me" cards */}
           </div>

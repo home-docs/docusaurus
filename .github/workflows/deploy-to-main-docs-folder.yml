@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Build and Deploy to mnik28.dev
 
 on:
   push:
