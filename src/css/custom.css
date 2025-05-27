@@ -17,6 +17,11 @@
   --ifm-color-primary-lightest: #99EBF0;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.07);
+  --ifm-card-background-color: #FAFAFA; /* A very light gray, like GitHub's UI elements */
+  --ifm-card-border-width: 1px;
+  --ifm-card-border-color: #e5e7eb;    /* A slightly more visible border color */
+  --ifm-card-box-shadow: var(--ifm-global-shadow-xs); /* Adds a very subtle shadow for depth */
+                                                     /* Options: --ifm-global-shadow-xs, --ifm-global-shadow-sm, etc. */
 }
 
 /* Dark Mode - Electric Pink/Magenta */
@@ -29,4 +34,23 @@
   --ifm-color-primary-lighter: #FF66B0;
   --ifm-color-primary-lightest: #FF99CB;
   --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.12); /* Slightly more pop for this style */
+  --ifm-card-background-color: #424242;
+}
+
+/* Ensure columns stretch to fill row height (often default, but good to be explicit) */
+.row {
+  /* display: flex; */ /* Usually already set by Docusaurus/Infima */
+  /* align-items: stretch; */ /* This makes flex items (columns) in a row have the same height */
+}
+
+/* Make cards take the full height of their column container and manage internal content flow */
+.col .card {
+  height: 100%; /* Make the card fill the column height */
+  display: flex; /* Use flexbox for the card's internal layout */
+  flex-direction: column; /* Stack card header, body, and footer vertically */
+}
+
+/* Allow the card body to grow and consume available space, pushing the footer down */
+.col .card .card__body {
+  flex-grow: 1;
 }

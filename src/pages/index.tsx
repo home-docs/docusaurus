@@ -1,40 +1,36 @@
 // src/pages/index.tsx
 import type { ReactNode } from 'react';
-import clsx from 'clsx';
-import Link from '@docusaurus/Link'; // Import Link component
+// import clsx from 'clsx'; // Likely not needed anymore
+import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
-import styles from './index.module.css';
+// import styles from './index.module.css'; // Likely not needed if heroBanner was the only style used
 
-function HomepageHeader() {
-  const { siteConfig } = useDocusaurusContext();
+// FeatureCard component (from previous successful state)
+function FeatureCard({title, description, linkTo, children, linkText = "Explore"}) {
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title} {/* This should display "Nikhil Upendra Marathe" */}
-        </Heading>
-        <p className="hero__subtitle">
-        </p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/resume">
-            View My Resume
-          </Link>
-          {/* You can add more buttons here for LinkedIn, GitHub, etc. */}
-          {/* Example for LinkedIn:
-          <Link
-            className="button button--secondary button--lg"
-            style={{marginLeft: '10px'}}
-            href="YOUR_LINKEDIN_URL">
-            LinkedIn
-          </Link>
-          */}
+    <div className="col col--6 margin-bottom--lg"> {/* Using col--6 for two cards to take up half width each */}
+      <div className="card">
+        <div className="card__header">
+          <Heading as="h3">{title}</Heading>
         </div>
+        <div className="card__body">
+          <p>{description}</p>
+        </div>
+        {children ? (
+          <div className="card__footer">{children}</div>
+        ) : linkTo ? (
+          <div className="card__footer">
+            <Link
+              className="button button--secondary button--block"
+              to={linkTo}>
+              {linkText}
+            </Link>
+          </div>
+        ) : null}
       </div>
-    </header>
+    </div>
   );
 }
 
@@ -42,11 +38,37 @@ export default function Home(): ReactNode {
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
-      title={`Home`}>
-      <HomepageHeader />
+      title={`Home - ${siteConfig.title}`}
+      description="Welcome to Nikhil's personal Docusaurus site. Explore documentation and my professional resume." // Updated description slightly
+    >
       <main>
-        {/* You can add more sections here if needed for the landing page */}
-        {/* For example, a brief introduction or highlighted projects */}
+        <div className="container padding-vert--lg">
+          <Heading as="h2" style={{textAlign: 'center', marginBottom: '2rem'}}>
+            Welcome!
+          </Heading>
+          <p style={{textAlign: 'center', fontSize: '1.1rem', marginBottom: '3rem'}}>
+            This site serves as a central hub for my home lab documentation and my professional resume.
+          </p>
+          <div className="row">
+            {/* Card 1: Documentation */}
+            <FeatureCard
+              title="Documentation"
+              description="Explore projects, configurations, and experiments from my home lab, and notes on this Docusaurus site setup."
+              linkTo="/docs/intro" // Links to your existing docs intro
+              linkText="View Documentation"
+            />
+
+            {/* Card 2: Resume */}
+            <FeatureCard
+              title="Professional Resume"
+              description="View my skills, experience, and certifications."
+              linkTo="/resume" // Path to your resume page
+              linkText="View Resume"
+            />
+
+            {/* Removed "My Docusaurus Journey" and "Connect with Me" cards */}
+          </div>
+        </div>
       </main>
     </Layout>
   );
