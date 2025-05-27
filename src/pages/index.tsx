@@ -1,11 +1,8 @@
-// src/pages/index.tsx
 import type { ReactNode } from 'react';
-// import clsx from 'clsx'; // Likely not needed anymore
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
-// import styles from './index.module.css'; // Likely not needed if heroBanner was the only style used
 
 // FeatureCard component (from previous successful state)
 function FeatureCard({title, description, linkTo, children, linkText = "Explore"}) {

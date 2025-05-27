@@ -1,12 +1,10 @@
-// src/pages/resume.tsx
 import type { ReactNode } from 'react';
 import clsx from 'clsx';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
-import useBaseUrl from '@docusaurus/useBaseUrl'; // Ensure this import is present
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
-// It looks like you've created resume.module.css, which is great!
 import styles from './resume.module.css';
 
 // --- Your existing data constants ---
@@ -142,23 +140,8 @@ const certificationsList = [
 ];
 // --- End of your data constants ---
 
-// Optional ResumePageHeader function (you can remove or use it if you like)
-// function ResumePageHeader() {
-//   const {siteConfig} = useDocusaurusContext();
-//   return (
-//     <header className={clsx('hero hero--primary', styles.heroBanner)}>
-//       <div className="container">
-//         <Heading as="h1" className="hero__title">
-//           {siteConfig.title} - Resume
-//         </Heading>
-//       </div>
-//     </header>
-//   );
-// }
-
 export default function ResumePage(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
-  // Assuming your image is named 'profile.jpg' and is in 'static/img/'
   const profileImageUrl = useBaseUrl('/img/nikhil_resume_photo.jpeg');
 
   return (
@@ -166,7 +149,6 @@ export default function ResumePage(): ReactNode {
       title={`Resume`}
       description={`Professional resume for ${siteConfig.title}. ${professionalSummaryText.substring(0, 160)}...`}
     >
-      {/* Optional: <ResumePageHeader /> */}
       <main className={styles.resumeMainContent}>
 
         {/* New Section for Name and Image */}

@@ -5,8 +5,6 @@
  */
 
 /* You can override the default Infima variables here. */
-/* Light Mode - McLaren Papaya Orange */
-/* Light Mode - Cyber Teal */
 :root {
   --ifm-color-primary: #00C2CB; /* A bright, clean teal */
   --ifm-color-primary-dark: #00A9B4;
@@ -24,7 +22,6 @@
                                                      /* Options: --ifm-global-shadow-xs, --ifm-global-shadow-sm, etc. */
 }
 
-/* Dark Mode - Electric Pink/Magenta */
 [data-theme='dark'] {
   --ifm-color-primary: #FF007A; /* A vibrant, electric pink/magenta */
   --ifm-color-primary-dark: #E6006E;
@@ -39,8 +36,6 @@
 
 /* Ensure columns stretch to fill row height (often default, but good to be explicit) */
 .row {
-  /* display: flex; */ /* Usually already set by Docusaurus/Infima */
-  /* align-items: stretch; */ /* This makes flex items (columns) in a row have the same height */
 }
 
 /* Make cards take the full height of their column container and manage internal content flow */

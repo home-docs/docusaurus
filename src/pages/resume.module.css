@@ -1,51 +1,4 @@
-/* src/pages/index.module.css */
-
-/* ... your existing .heroBanner styles (should be updated as per previous advice) ... */
-/* Example for .heroBanner if you made it custom: */
-.heroBanner {
-  padding: 2rem 0;
-  /* Example: reduced padding */
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  background-color: var(--ifm-color-primary-lightest);
-  /* Your new background */
-  color: var(--ifm-font-color-base);
-  /* Ensure text is readable */
-}
-
-[data-theme='dark'] .heroBanner {
-  background-color: var(--ifm-color-primary-darkest);
-  color: var(--ifm-font-color-base);
-}
-
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 1.5rem;
-    /* Example: reduced padding for mobile */
-  }
-}
-
-/* Example styles for new classes in HomepageHeader, if you added them */
-.resumeName {
-  /* Define styles for your name in the header */
-  /* e.g., font-size: 2.5rem; margin-bottom: 0.5rem; */
-}
-
-.resumeProfessionalTitle {
-  /* Define styles for your professional title in the header */
-  /* e.g., font-size: 1.2rem; color: var(--ifm-color-secondary-darkest); */
-}
-
-
-/* Remove or comment out .buttons if it's no longer used */
-.buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* --- New styles for resume content --- */
+/* --- Styles for resume content --- */
 .resumeMainContent {
   padding: 2rem 1rem;
   max-width: 960px;
@@ -61,7 +14,6 @@
   font-size: 1.75rem;
   margin-bottom: 1rem;
   color: var(--ifm-color-primary-dark);
-  /* Example */
 }
 
 .summaryText {
@@ -88,7 +40,6 @@
 
 .companyName {
   font-size: 1.4rem;
-  /* Or your preferred size */
   color: var(--ifm-color-emphasis-800);
   margin-bottom: 0.5rem;
   /* Remove bottom margin if any, as .entryHeader handles spacing */
@@ -102,13 +53,11 @@
 
 .roleTitle {
   font-size: 1.2rem;
-  /* Or your preferred size */
   color: var(--ifm-color-emphasis-800);
   margin-bottom: 0.25rem;
   /* Remove bottom margin if any */
 }
 
-/* Ensure styles for .responsibilitiesLabel, .responsibilitiesList, .responsibilityItem are also defined */
 .responsibilitiesLabel {
   font-weight: bold;
   margin-top: 0.5rem;
@@ -117,7 +66,6 @@
   font-size: 1rem;
 }
 
-/* In src/pages/index.module.css */
 .educationEntry {
   margin-bottom: 1.5rem;
   padding-left: 1rem;
@@ -149,10 +97,6 @@
   color: var(--ifm-font-color-secondary);
 }
 
-/* src/pages/index.module.css */
-
-/* ... (your existing styles) ... */
-
 /* --- Styles for Certifications Section --- */
 .certificationsContainer {
   display: grid;
@@ -182,15 +126,11 @@
 
 .certificationThumbnail {
   width: 80px;
-  /* Adjust size as needed */
   height: 80px;
-  /* Adjust size as needed */
   object-fit: contain;
   /* Ensures the image fits well without distortion */
   flex-shrink: 0;
   /* Prevents image from shrinking if text is long */
-  /* border: 1px solid var(--ifm-color-emphasis-200); /* Optional border for the image */
-  /* border-radius: 4px; */
 }
 
 .certificationInfo {
@@ -201,7 +141,6 @@
 
 .certificationName {
   font-size: 1.15rem;
-  /* Adjust as needed */
   margin-bottom: 0.25rem;
   color: var(--ifm-color-primary);
   /* Example: use primary color for cert name */
@@ -218,20 +157,7 @@
   /* Helps if you need to apply margins or ensure it behaves like a block for layout */
   text-decoration: none;
   /* Removes underline if any browser adds it by default to image links */
-  /* border: none; */
-  /* Removes border if any browser adds it by default to image links */
 }
-
-.certificationThumbnail {
-  width: 80px;
-  height: 80px;
-  object-fit: contain;
-  flex-shrink: 0;
-  /* If you want a hover effect on the thumbnail itself: */
-  /* transition: transform 0.2s ease-in-out; */
-}
-
-/* Add these to src/pages/index.module.css or your resume-specific CSS file */
 
 .profileHeader {
   display: flex;
@@ -255,17 +181,13 @@
 
 .profileName {
   font-size: 2.5rem;
-  /* Adjust as needed */
   margin-bottom: 0.25rem;
   color: var(--ifm-color-primary-dark);
-  /* Or your preferred color */
 }
 
 .profileTitle {
   font-size: 1.2rem;
-  /* Adjust as needed */
   color: var(--ifm-color-emphasis-700);
-  /* Or your preferred color */
   margin-top: 0;
 }
 
@@ -277,9 +199,7 @@
 
 .profileImage {
   width: 150px;
-  /* Adjust size as needed */
   height: 150px;
-  /* Adjust size as needed */
   border-radius: 50%;
   /* Makes the image circular */
   object-fit: cover;
@@ -311,5 +231,3 @@
     margin-bottom: 1rem;
   }
 }
-
-/* ... any other styles you need ... */
