@@ -68,7 +68,6 @@ const config: Config = {
       ],
     },
     footer: {
-      //style: 'dark', // You can keep 'dark' or 'light', this mainly affects colors
       links: [], // An empty array here will remove all link columns
       copyright: `Copyright © ${new Date().getFullYear()} Nikhil Upendra Marathe. Built with Docusaurus.`, // This will be retained
     },
