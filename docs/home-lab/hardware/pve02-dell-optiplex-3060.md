@@ -31,16 +31,16 @@ slug: /home-lab/hardware/pve02-dell-optiplex-3060
 4.  **Proxmox VE Installation**:
     * Follow the on-screen installation wizard.
     * Select the **GEONIX M.2 SSD 256 GB** as the installation target for the Proxmox VE operating system.
-    * During network configuration, assign a unique static IP address within your home lab's network range for `pve02`.
+    * Configure network settings (IP address, netmask, gateway, DNS). It's recommended to assign a static IP address for a hypervisor.
     * Set a strong root password and provide a valid email.
     * Complete the installation and reboot the system.
 
 ### Configuring Initial Network Settings
 Similar to `pve01`, initial network settings are set during installation.
 
-1.  **Access Proxmox Web UI**: Open your web browser and navigate to `https://<YOUR_PVE02_IP_ADDRESS>:8006`.
+1.  **Access Proxmox Web UI**: Identify the OptiPlex's IP address via the [Unifi Dream Machine](/docs/home-lab/hardware/unifi-dream-machine)'s UniFi Controller interface. Then, open your web browser and navigate to `https://<YOUR_PVE02_IP_ADDRESS>:8006`.
 2.  **Login**: Use `root` and your set password.
-3.  **Verify Network Configuration**: Navigate to `Datacenter -> pve02 (or your node name) -> System -> Network` to confirm the static IP and bridge setup.
+3.  **Verify Network Configuration**: Navigate to `Datacenter -> pve02 (or your node name) -> System -> Network` to confirm the static IP and bridge setup, and make sure the IP is reserved on the [Unifi Dream Machine](/docs/home-lab/hardware/unifi-dream-machine).
 
 ### Adding and Configuring the Crucial BX500 Storage Drive
 

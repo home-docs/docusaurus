@@ -25,6 +25,8 @@ const sidebars: SidebarsConfig = {
             'home-lab/hardware/raspberry-pi-4-64',
             'home-lab/hardware/pve01-dell-optiplex-3060',
             'home-lab/hardware/pve02-dell-optiplex-3060',
+            'home-lab/hardware/ovh-vps', // New: OVH VPS
+            'home-lab/hardware/unifi-dream-machine', // New: Unifi Dream Machine
           ],
         },
         {
@@ -61,14 +63,14 @@ const sidebars: SidebarsConfig = {
           items: [
             {
               type: 'doc',
-              id: 'tools-technologies/github/github-setup', // Correctly referencing the ID from the file's front matter
+              id: 'tools-technologies/github/github-setup',
               label: 'Getting Started',
             },
           ],
         },
         {
           type: 'doc',
-          id: 'tools-technologies/docusaurus/docusaurus', // Correctly referencing the ID from the file's front matter
+          id: 'tools-technologies/docusaurus/docusaurus',
           label: 'Docusaurus',
         },
         // Future additions like Ansible, Terraform would go here

@@ -38,11 +38,7 @@ You can monitor the boot process by connecting a display to the Raspberry Pi, bu
 
 Once the boot process is complete, Home Assistant should be accessible on your local network.
 
-1.  **Find Home Assistant's IP Address**:
-    * **Option A (Recommended)**: Check your router's connected devices list or DHCP client list. Look for a device named `homeassistant` or `hassio`.
-    * **Option B**: Use a network scanner tool (e.g., [Fing](https://www.fing.com/products/fing-app) on mobile, [Advanced IP Scanner](https://www.advanced-ip-scanner.com/) on Windows) to find new devices on your network.
-    * **Option C**: If you connected a display, the IP address might be shown on the console after boot.
-2.  **Access the Home Assistant UI**: Open a web browser on a device connected to the same network and navigate to `http://homeassistant.local:8123` or `http://<YOUR_RPI_IP_ADDRESS>:8123`.
+1.  **Access the Home Assistant UI**: Identify the Raspberry Pi's IP address through your [Unifi Dream Machine](/docs/home-lab/hardware/unifi-dream-machine)'s UniFi Controller interface. Then, open a web browser on a device connected to the same network and navigate to `http://homeassistant.local:8123` or `http://<YOUR_RPI_IP_ADDRESS>:8123`.
 
 ## Basic Home Assistant Configuration
 
@@ -55,7 +51,7 @@ Upon first access, Home Assistant will prompt you to create a new user account.
 ### Setting Up Basic Integrations
 Home Assistant will automatically discover some devices and services on your network.
 1.  **Review Discovered Devices**: On the "Integrations" page (usually the first page after setup, or navigate via `Configuration -> Devices & Services -> Integrations`), review any automatically discovered devices.
-2.  **Add Network Integration**: Ensure your network configuration is stable. For most users, DHCP is sufficient. If you need a static IP, you can configure it via the Home Assistant OS terminal or the Home Assistant Supervisor UI.
+2.  **Add Network Integration**: Ensure your network configuration is stable. For most users, DHCP is sufficient. If you need a static IP, you can configure it via the Home Assistant OS terminal or the Home Assistant Supervisor UI, and then make it static on the [Unifi Dream Machine](/docs/home-lab/hardware/unifi-dream-machine).
     * **Via Supervisor (Recommended)**: Go to `Supervisor -> System -> Host` and click on "IP Address". You can configure your network settings there.
 3.  **Add Initial Devices**: Start adding your smart home devices (e.g., smart lights, switches, sensors) by searching for their respective integrations in `Configuration -> Devices & Services -> Integrations -> Add Integration`. Follow the specific instructions for each device.
 

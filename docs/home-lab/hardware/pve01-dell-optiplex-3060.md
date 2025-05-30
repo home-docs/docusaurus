@@ -41,12 +41,12 @@ slug: /home-lab/hardware/pve01-dell-optiplex-3060
 ### Configuring Initial Network Settings
 During installation, you set up basic networking. After rebooting, you can access the Proxmox Web UI to further refine network settings if needed.
 
-1.  **Access Proxmox Web UI**: Open a web browser and navigate to `https://<YOUR_PVE01_IP_ADDRESS>:8006`.
+1.  **Access Proxmox Web UI**: Identify the OptiPlex's IP address via the [Unifi Dream Machine](/docs/home-lab/hardware/unifi-dream-machine)'s UniFi Controller interface. Then, open a web browser and navigate to `https://<YOUR_PVE01_IP_ADDRESS>:8006`.
 2.  **Login**: Use `root` as the username and the password you set during installation.
 3.  **Network Configuration**:
     * Navigate to `Datacenter -> pve01 (or your node name) -> System -> Network`.
     * You can edit existing network devices (`vmbr0` for your bridge) or add new ones.
-    * Ensure your bridge is correctly configured for your network (e.g., using a static IP within your home lab's IP range).
+    * Ensure your bridge is correctly configured for your network (e.g., using a static IP within your home lab's IP range), and make sure the IP is reserved on the [Unifi Dream Machine](/docs/home-lab/hardware/unifi-dream-machine).
 
 ### Adding and Configuring Storage Drives
 
