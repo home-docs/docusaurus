@@ -1,0 +1,8 @@
+{
+  "label": "Software & Services",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Documentation for the operating systems, virtualization platforms, and key applications running in the home lab."
+  }
+}

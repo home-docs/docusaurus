@@ -1,0 +1,8 @@
+{
+  "label": "Hardware Overview",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Detailed specifications and roles of each physical device in the home lab."
+  }
+}

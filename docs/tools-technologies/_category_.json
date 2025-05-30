@@ -1,0 +1,8 @@
+{
+  "label": "Tools & Technologies",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Documentation for various tools and technologies used in my projects, including Docusaurus itself, GitHub, and future automation tools."
+  }
+}

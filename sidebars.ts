@@ -1,17 +1,58 @@
 import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
 
-// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
-
 const sidebars: SidebarsConfig = {
-  mainSidebar: [ //
+  mainSidebar: [
     {
       type: 'category',
-      label: 'Documentation',
+      label: 'Home Lab',
       link: {
         type: 'generated-index',
-        title: 'All Documentation',
-        description: 'Learn about Docusaurus setup and GitHub repository management.',
-        slug: '/documentation',
+        title: 'Home Lab Overview',
+        description: 'Explore the hardware, software, and configurations of my personal home lab setup.',
+        slug: '/home-lab',
+      },
+      items: [
+        {
+          type: 'category',
+          label: 'Hardware Overview',
+          link: {
+            type: 'generated-index',
+            title: 'Hardware Components',
+            description: 'Detailed specifications and roles of each physical device in the home lab.',
+            slug: '/home-lab/hardware',
+          },
+          items: [
+            'home-lab/hardware/raspberry-pi-4-64',
+            'home-lab/hardware/pve01-dell-optiplex-3060',
+            'home-lab/hardware/pve02-dell-optiplex-3060',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Software & Services',
+          link: {
+            type: 'generated-index',
+            title: 'Software & Services',
+            description: 'Documentation for operating systems, virtualization platforms, and key applications.',
+            slug: '/home-lab/software-services',
+          },
+          items: [
+            'home-lab/software-services/home-assistant-os',
+            'home-lab/software-services/proxmox-ve',
+            // Add other software/services here as you document them
+          ],
+        },
+        // Add more top-level home lab categories here (e.g., Network Configuration, Guides & Tutorials)
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Tools & Technologies',
+      link: {
+        type: 'generated-index',
+        title: 'Tools & Technologies',
+        description: 'Documentation for various tools and technologies used in my projects, including Docusaurus itself.',
+        slug: '/tools-technologies',
       },
       items: [
         {
@@ -20,22 +61,20 @@ const sidebars: SidebarsConfig = {
           items: [
             {
               type: 'doc',
-              id: 'github/github-setup',
+              id: 'tools-technologies/github/github-setup', // Correctly referencing the ID from the file's front matter
               label: 'Getting Started',
             },
           ],
         },
-        // {
-        //   type: 'category',
-        //   label: 'Docusaurus',
-        //   items: [
-        //     'docusaurus/docusaurus',
-        //   ],
-        // },
+        {
+          type: 'doc',
+          id: 'tools-technologies/docusaurus/docusaurus', // Correctly referencing the ID from the file's front matter
+          label: 'Docusaurus',
+        },
+        // Future additions like Ansible, Terraform would go here
       ],
     },
   ],
-  // Remove the old empty 'mainSidebar' entry
 };
 
 export default sidebars;

@@ -47,21 +47,29 @@ export default function Home(): ReactNode {
             This site serves as a central hub for my home lab documentation and my professional resume.
           </p>
           <div className="row">
-            {/* Card 1: Documentation */}
+            {/* Card 1: Home Lab Documentation */}
             <FeatureCard
-              title="Documentation"
-              description="Explore projects, configurations, and experiments from my home lab, and notes on this Docusaurus site setup."
-              linkTo="/docs/documentation" // Links to your existing docs intro
-              linkText="View Documentation" children={undefined}            />
+              title="Home Lab Documentation"
+              description="Explore the hardware, software, and configurations of my personal home lab setup."
+              linkTo="/docs/home-lab" // Updated link to the Home Lab generated index page
+              linkText="View Home Lab Docs" children={undefined}
+            />
 
-            {/* Card 2: Resume */}
+            {/* Card 2: Tools & Technologies Documentation */}
+            <FeatureCard
+              title="Tools & Technologies"
+              description="Discover guides and notes on Docusaurus, GitHub, and other technical tools."
+              linkTo="/docs/tools-technologies" // Updated link to the Tools & Technologies generated index page
+              linkText="Explore Tools & Tech" children={undefined}
+            />
+
+            {/* Card 3: Professional Resume */}
             <FeatureCard
               title="Professional Resume"
               description="View my skills, experience, and certifications."
               linkTo="/resume" // Path to your resume page
-              linkText="View Resume" children={undefined}            />
-
-            {/* Removed "My Docusaurus Journey" and "Connect with Me" cards */}
+              linkText="View Resume" children={undefined}
+            />
           </div>
         </div>
       </main>
