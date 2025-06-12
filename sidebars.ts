@@ -14,7 +14,7 @@ const sidebars: SidebarsConfig = {
       items: [
         {
           type: 'category',
-          label: 'Hardware Overview',
+          label: 'Hardware',
           link: {
             type: 'generated-index',
             title: 'Hardware Components',
@@ -22,11 +22,11 @@ const sidebars: SidebarsConfig = {
             slug: '/home-lab/hardware',
           },
           items: [
-            'home-lab/hardware/raspberry-pi-4-64',
+            'home-lab/hardware/unifi-dream-machine',
+            'home-lab/hardware/ovh-vps',
             'home-lab/hardware/pve01-dell-optiplex-3060',
             'home-lab/hardware/pve02-dell-optiplex-3060',
-            'home-lab/hardware/ovh-vps', // New: OVH VPS
-            'home-lab/hardware/unifi-dream-machine', // New: Unifi Dream Machine
+            'home-lab/hardware/raspberry-pi-4-64',
           ],
         },
         {
@@ -39,12 +39,13 @@ const sidebars: SidebarsConfig = {
             slug: '/home-lab/software-services',
           },
           items: [
-            'home-lab/software-services/home-assistant-os',
+            'home-lab/software-services/networking-services',
             'home-lab/software-services/proxmox-ve',
-            // Add other software/services here as you document them
+            'home-lab/software-services/mediaserver',
+            'home-lab/software-services/utility-services',
+            'home-lab/software-services/home-assistant-os',
           ],
         },
-        // Add more top-level home lab categories here (e.g., Network Configuration, Guides & Tutorials)
       ],
     },
     {
@@ -73,7 +74,6 @@ const sidebars: SidebarsConfig = {
           id: 'tools-technologies/docusaurus/docusaurus',
           label: 'Docusaurus',
         },
-        // Future additions like Ansible, Terraform would go here
       ],
     },
   ],

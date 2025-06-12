@@ -6,30 +6,22 @@ slug: /home-lab/hardware/ovh-vps
 ---
 
 ## Introduction and Overview
-The OVH VPS serves as an external component of the home lab, providing a public-facing server for services that require external access or for off-site backups/monitoring. It offers a small but capable environment for various online tasks.
+The OVH VPS is a small cloud server located in Singapore that serves as the public-facing entry point for the entire home lab. Its primary function is to securely route external traffic to internal services without exposing the home lab's IP address directly.
 
 ## Hardware Specifications
 * **Model**: VPS vps2020-starter-1-2-20
 * **CPU**: 1 vCores
 * **Memory**: 2GB
 * **Storage**: 20GB
+* **OS**: Ubuntu Server LTS
 
-## Operating System
-* **OS**: Ubuntu Server (Latest LTS version, managed by OVH Cloud)
+## Core Services
 
-## Initial Setup Guide (Conceptual)
-Since this is a managed VPS, the initial hardware setup (powering on, connecting to network) is handled by OVH. Your primary setup steps would involve:
+### Caddy (External Reverse Proxy)
+Caddy is installed on this VPS to act as the primary reverse proxy for the `ketwork.in` domain. It handles all incoming HTTPS traffic, automatically provisions and renews SSL certificates, and proxies requests to the appropriate internal service.
 
-1.  **Accessing the VPS**: Typically via SSH using the credentials provided by OVH.
-2.  **Initial OS Configuration**:
-    * Updating system packages:
-        ```bash
-        sudo apt update && sudo apt upgrade -y
-        ```
-    * Setting up a non-root user with sudo privileges.
-    * Configuring SSH key-based authentication and disabling password login (highly recommended for security).
-    * Setting up a basic firewall (e.g., UFW - Uncomplicated Firewall) to allow only necessary inbound traffic (SSH, web server ports, etc.).
-3.  **Software Installation**: Install any services or applications you plan to run on the VPS (e.g., a VPN server, a small web application, monitoring agents).
+### Tailscale
+Tailscale is the backbone of the secure connection between this public VPS and the private home lab. The VPS is a node on the Tailscale network, which allows Caddy to forward traffic to services running on the internal `10.0.0.0/22` subnet via the secure tunnel.
 
 ## Networking
-The OVH VPS has its own public IP address and is outside your local home network. Communication with internal home lab devices would typically be established via VPN tunnels or secured port forwarding on the Unifi Dream Machine.
+This VPS has a public IP address managed by OVH. All communication with the internal home lab devices is done exclusively over the **Tailscale mesh network**. There are no direct open ports to the home lab from this VPS, ensuring a secure boundary. DNS for `ketwork.in` is managed by Cloudflare, which points to this VPS's public IP.
