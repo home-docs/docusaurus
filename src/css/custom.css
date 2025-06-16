@@ -15,11 +15,10 @@
   --ifm-color-primary-lightest: #99EBF0;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.07);
-  --ifm-card-background-color: #FAFAFA; /* A very light gray, like GitHub's UI elements */
+  --ifm-card-background-color: #FAFAFA;
   --ifm-card-border-width: 1px;
-  --ifm-card-border-color: #e5e7eb;    /* A slightly more visible border color */
-  --ifm-card-box-shadow: var(--ifm-global-shadow-xs); /* Adds a very subtle shadow for depth */
-                                                     /* Options: --ifm-global-shadow-xs, --ifm-global-shadow-sm, etc. */
+  --ifm-card-border-color: #e5e7eb;
+  --ifm-card-box-shadow: var(--ifm-global-shadow-xs);
 }
 
 [data-theme='dark'] {
@@ -30,19 +29,54 @@
   --ifm-color-primary-light: #FF3395;
   --ifm-color-primary-lighter: #FF66B0;
   --ifm-color-primary-lightest: #FF99CB;
-  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.12); /* Slightly more pop for this style */
+  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.12);
   --ifm-card-background-color: #424242;
 }
 
-/* Ensure columns stretch to fill row height (often default, but good to be explicit) */
-.row {
+/* --- NEW STYLES --- */
+
+/* Hero background pattern */
+.hero.hero--primary {
+  /* Example from heropatterns.com - feel free to change! */
+  background-image: repeating-linear-gradient(
+    45deg,
+    var(--ifm-color-primary-darker),
+    var(--ifm-color-primary-darker) 1px,
+    transparent 1px,
+    transparent 10px
+  );
 }
+
+[data-theme='dark'] .hero.hero--primary {
+   /* Example for dark theme */
+  background-image: repeating-linear-gradient(
+    45deg,
+    var(--ifm-color-primary-darkest),
+    var(--ifm-color-primary-darkest) 1px,
+    transparent 1px,
+    transparent 10px
+  );
+}
+
+
+/* Card hover effect */
+.card {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--ifm-global-shadow-lw);
+}
+
+
+/* --- EXISTING STYLES --- */
 
 /* Make cards take the full height of their column container and manage internal content flow */
 .col .card {
-  height: 100%; /* Make the card fill the column height */
-  display: flex; /* Use flexbox for the card's internal layout */
-  flex-direction: column; /* Stack card header, body, and footer vertically */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Allow the card body to grow and consume available space, pushing the footer down */
