@@ -6,7 +6,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Nikhil Upendra Marathe',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/nikhil.ico',
 
   // Set the production url of your site here
   url: 'https://home-docs.github.io',
@@ -52,7 +52,7 @@ const config: Config = {
       title: 'Nikhils Docusaurus',
       logo: {
         alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        src: 'img/nikhil.ico',
       },
       items: [
         {

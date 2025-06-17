@@ -34,31 +34,6 @@
 }
 
 /* --- NEW STYLES --- */
-
-/* Hero background pattern */
-.hero.hero--primary {
-  /* Example from heropatterns.com - feel free to change! */
-  background-image: repeating-linear-gradient(
-    45deg,
-    var(--ifm-color-primary-darker),
-    var(--ifm-color-primary-darker) 1px,
-    transparent 1px,
-    transparent 10px
-  );
-}
-
-[data-theme='dark'] .hero.hero--primary {
-   /* Example for dark theme */
-  background-image: repeating-linear-gradient(
-    45deg,
-    var(--ifm-color-primary-darkest),
-    var(--ifm-color-primary-darkest) 1px,
-    transparent 1px,
-    transparent 10px
-  );
-}
-
-
 /* Card hover effect */
 .card {
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
