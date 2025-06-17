@@ -33,6 +33,28 @@
   --ifm-card-background-color: #424242;
 }
 
+.navbar {
+  /* Floating effect */
+  width: 80%; /* Set width to 80% of the viewport */
+  margin: 1rem auto; /* Center the navbar with 1rem top/bottom margin */
+  border-radius: 12px;
+  
+  /* Translucent effect */
+  background-color: rgba(var(--ifm-background-color-rgb), 0.85);
+  backdrop-filter: blur(10px);
+
+  /* Optional: A subtle border helps define the floating navbar */
+  border: 1px solid rgba(var(--ifm-color-emphasis-300), 0.3);
+}
+
+.hero.hero--primary {
+  width: 76.2%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem; /* Or var(--ifm-spacing-vertical) */
+  border-radius: 12px;
+}
+
 /* --- NEW STYLES --- */
 /* Card hover effect */
 .card {
