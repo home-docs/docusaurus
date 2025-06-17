@@ -22,6 +22,10 @@ const config: Config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
+  clientModules: [
+    require.resolve('./src/client-modules/navbar-hider.ts'),
+  ],
+
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
@@ -46,7 +50,7 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
+    experimental_useViewTransitions: true,
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
       title: 'Nikhils Docusaurus',

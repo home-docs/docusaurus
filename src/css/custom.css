@@ -1,18 +1,16 @@
 /**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
+ * Docusaurus Custom Styles
  */
 
-/* You can override the default Infima variables here. */
+/* --- Theme Color Variables --- */
 :root {
-  --ifm-color-primary: #00C2CB; /* A bright, clean teal */
-  --ifm-color-primary-dark: #00A9B4;
-  --ifm-color-primary-darker: #0093A0;
-  --ifm-color-primary-darkest: #007D8A;
-  --ifm-color-primary-light: #33D0D8;
-  --ifm-color-primary-lighter: #66DEE3;
-  --ifm-color-primary-lightest: #99EBF0;
+  --ifm-color-primary: #172554;
+  --ifm-color-primary-dark: #15214c;
+  --ifm-color-primary-darker: #141f47;
+  --ifm-color-primary-darkest: #101a3b;
+  --ifm-color-primary-light: #19295c;
+  --ifm-color-primary-lighter: #1a2b61;
+  --ifm-color-primary-lightest: #1e306d;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.07);
   --ifm-card-background-color: #FAFAFA;
@@ -22,61 +20,108 @@
 }
 
 [data-theme='dark'] {
-  --ifm-color-primary: #FF007A; /* A vibrant, electric pink/magenta */
-  --ifm-color-primary-dark: #E6006E;
-  --ifm-color-primary-darker: #CC0062;
-  --ifm-color-primary-darkest: #B30056;
-  --ifm-color-primary-light: #FF3395;
-  --ifm-color-primary-lighter: #FF66B0;
-  --ifm-color-primary-lightest: #FF99CB;
+  --ifm-color-primary: #fb923c;
+  --ifm-color-primary-dark: #fa811e;
+  --ifm-color-primary-darker: #fa780e;
+  --ifm-color-primary-darkest: #d56204;
+  --ifm-color-primary-light: #fca35a;
+  --ifm-color-primary-lighter: #fcac6a;
+  --ifm-color-primary-lightest: #fdc597;
   --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.12);
   --ifm-card-background-color: #424242;
 }
 
+/* --- Global Page & Theme Transition --- */
+/* Uses the experimental View Transitions API */
+::view-transition-old(root) {
+  animation: 300ms cubic-bezier(0.4, 0, 0.2, 1) both docusaurus-fade-out;
+}
+::view-transition-new(root) {
+  animation: 300ms cubic-bezier(0.4, 0, 0.2, 1) both docusaurus-fade-in;
+}
+@keyframes docusaurus-fade-out { to { opacity: 0; } }
+@keyframes docusaurus-fade-in { from { opacity: 0; } }
+
+
+/* --- Navbar Styles --- */
 .navbar {
-  /* Floating effect */
-  width: 80%; /* Set width to 80% of the viewport */
-  margin: 1rem auto; /* Center the navbar with 1rem top/bottom margin */
+  width: 90%;
+  margin: 1rem auto;
   border-radius: 12px;
-  
-  /* Translucent effect */
   background-color: rgba(var(--ifm-background-color-rgb), 0.85);
   backdrop-filter: blur(10px);
-
-  /* Optional: A subtle border helps define the floating navbar */
   border: 1px solid rgba(var(--ifm-color-emphasis-300), 0.3);
+  /* This transition is only for the hide-on-scroll transform effect */
+  transition: transform 0.3s ease-in-out;
 }
 
+.navbar--hidden {
+  transform: translateY(-120%);
+}
+
+/* --- Homepage Hero Section --- */
 .hero.hero--primary {
   width: 76.2%;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 1rem; /* Or var(--ifm-spacing-vertical) */
+  margin-bottom: 1.5rem;
   border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  color: #FFFFFF;
+  background-color: transparent;
 }
 
-/* --- NEW STYLES --- */
-/* Card hover effect */
-.card {
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+.hero.hero--primary::before,
+.hero.hero--primary::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--ifm-global-shadow-lw);
+/* Light Theme Hero Image Layer */
+[data-theme='light'] .hero.hero--primary::before {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url('/img/hero-background-light.jpeg');
+  opacity: 1;
+}
+[data-theme='dark'] .hero.hero--primary::before {
+  opacity: 0;
 }
 
+/* Dark Theme Hero Image Layer */
+[data-theme='light'] .hero.hero--primary::after {
+  opacity: 0;
+}
+[data-theme='dark'] .hero.hero--primary::after {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('/img/hero-background-dark.jpeg');
+  opacity: 1;
+}
 
-/* --- EXISTING STYLES --- */
-
-/* Make cards take the full height of their column container and manage internal content flow */
+/* --- Card Styles --- */
 .col .card {
   height: 100%;
   display: flex;
   flex-direction: column;
 }
 
-/* Allow the card body to grow and consume available space, pushing the footer down */
 .col .card .card__body {
   flex-grow: 1;
+}
+
+.card {
+  /* This transition is only for the hover effect */
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--ifm-global-shadow-lw);
 }
