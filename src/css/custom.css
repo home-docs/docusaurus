@@ -17,6 +17,7 @@
   --ifm-card-border-width: 1px;
   --ifm-card-border-color: #e5e7eb;
   --ifm-card-box-shadow: var(--ifm-global-shadow-xs);
+  --ifm-navbar-height: 80px;
 }
 
 [data-theme='dark'] {
@@ -45,18 +46,25 @@
 
 /* --- Navbar Styles --- */
 .navbar {
+  /* Change positioning from sticky to fixed */
+  position: fixed;
+  top: 1rem;
+  left: 50%;
   width: 90%;
-  margin: 1rem auto;
   border-radius: 12px;
-  background-color: rgba(var(--ifm-background-color-rgb), 0.85);
+  background-color: rgba(var(--ifm-background-color-rgb), 0.95);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(var(--ifm-color-emphasis-300), 0.3);
-  /* This transition is only for the hide-on-scroll transform effect */
+  transform: translateX(-50%);
   transition: transform 0.3s ease-in-out;
 }
 
 .navbar--hidden {
-  transform: translateY(-120%);
+  transform: translateX(-50%) translateY(-120%);
+}
+
+.main-wrapper {
+  padding-top: calc(var(--ifm-navbar-height) + 2rem); /* Navbar height + top margin + extra space */
 }
 
 /* --- Homepage Hero Section --- */

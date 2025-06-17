@@ -49,13 +49,6 @@ export default function Home(): ReactNode {
           <p className="hero__subtitle">
             Exploring DevOps, Automation, and Cloud Infrastructure Through Hands-On Projects.
           </p>
-          <div>
-            <Link
-              className="button button--secondary button--lg"
-              to="/docs/home-lab">
-              Explore My Home Lab →
-            </Link>
-          </div>
         </div>
       </header>
 
