@@ -16,7 +16,7 @@ slug: /home-lab/hardware/pve02-dell-optiplex-3060
 * **SSD (VM/LXC Storage)**: Crucial BX500 1TB 3D NAND SATA 2.5-inch SSD
 
 ## Physical Connections
-* **Printer**: An HP 1212 Printer is connected directly to this machine via USB 2.0. This connection is managed by the CUPS Print Server VM.
+* **Printer**: A HP 1212 Printer is connected directly to this machine via USB 2.0. This connection is managed by the CUPS Print Server VM.
 
 ## Hosted Services
 * **[LXC: heimdall (Internal Proxy)](/docs/home-lab/software-services/utility-services)**: An LXC container running Caddy as an internal reverse proxy.
