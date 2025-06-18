@@ -1,4 +1,3 @@
-// src/client-modules/navbar-hider.ts
 import type { ClientModule } from '@docusaurus/types';
 
 const clientModule: ClientModule = {
@@ -22,18 +21,15 @@ const clientModule: ClientModule = {
         return;
       }
 
-      // If scrolling down and past the navbar
       if (currentScrollY > lastScrollY && currentScrollY > navbar.clientHeight) {
         navbar.classList.add('navbar--hidden');
       } else {
-        // If scrolling up
         navbar.classList.remove('navbar--hidden');
       }
 
       lastScrollY = currentScrollY;
     };
 
-    // Add the listener for the current page
     window.addEventListener('scroll', handleScroll);
 
     // Return a cleanup function that Docusaurus will call before the next route changes

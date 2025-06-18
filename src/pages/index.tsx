@@ -5,14 +5,11 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
 
-// An enhanced FeatureCard component that accepts an icon and a className
 function FeatureCard({title, description, linkTo, icon, linkText = "Explore", className}) {
   return (
-    // The className prop is used here to control the column layout
     <div className={clsx('col margin-bottom--lg', className)}>
       <div className="card" style={{ height: '100%' }}>
         <div className="card__header">
-          {/* Render the icon if provided */}
           {icon && <div className="card__icon" style={{fontSize: '2rem', marginBottom: '0.5rem'}}>{icon}</div>}
           <Heading as="h3">{title}</Heading>
         </div>
@@ -40,7 +37,6 @@ export default function Home(): ReactNode {
       title="Home"
       description="Showcasing my DevOps journey through home lab projects, technical documentation, and professional experience."
     >
-      {/* New Hero Section */}
       <header className={clsx('hero hero--primary')}>
         <div className="container">
           <Heading as="h1" className="hero__title">
@@ -53,7 +49,6 @@ export default function Home(): ReactNode {
       </header>
 
       <main>
-        {/* Main Feature Cards Section */}
         <div className="container padding-vert--lg">
           <div className="row" style={{ justifyContent: 'center' }}>
             <FeatureCard
@@ -73,11 +68,9 @@ export default function Home(): ReactNode {
           </div>
         </div>
 
-        {/* New "Featured Skills" Section */}
         <div className="container text--center padding-vert--lg">
           <Heading as="h2">My Favorite Tools</Heading>
           <div className="row" style={{justifyContent: 'center', gap: '1.5rem', marginTop: '2rem', alignItems: 'center'}}>
-            {/* You'll need to add these images to your `static/img/logos` directory */}
             <img src="/img/logos/azure.svg" alt="Azure" title="Azure" style={{height: 40, width: 40}} />
             <img src="/img/logos/docker.svg" alt="Docker" title="Docker" style={{height: 40, width: 40}} />
             <img src="/img/logos/terraform.svg" alt="Terraform" title="Terraform" style={{height: 40, width: 40}} />
