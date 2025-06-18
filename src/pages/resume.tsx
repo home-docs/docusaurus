@@ -7,7 +7,6 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 import styles from './resume.module.css';
 
-// --- Your existing data constants ---
 const professionalSummaryText = `Tech Leader with 12+ years’ experience driving software solutions and technical operations. Expert in implementation, DevOps management, and automation. Strong advocate for DevOps strategies, leading automation initiatives, and ensuring robust testing practices. Holds Microsoft Azure Fundamentals and Professional Scrum Master certifications, backed by a comprehensive skill set in Azure DevOps, SQL, and Microsoft technologies. Known for exceptional problem-solving skills and effective communication, fostering collaboration among stakeholders, team members, and clients.`;
 
 const skillsList = [
@@ -138,7 +137,6 @@ const certificationsList = [
     altText: 'Microsoft Certified Azure Fundamentals Badge'
   },
 ];
-// --- End of your data constants ---
 
 export default function ResumePage(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
@@ -151,7 +149,6 @@ export default function ResumePage(): ReactNode {
     >
       <main className={styles.resumeMainContent}>
 
-        {/* New Section for Name and Image */}
         <section className={clsx(styles.resumeSection, styles.profileHeader)}>
           <div className={styles.profileText}>
             <Heading as="h1" className={styles.profileName}>
@@ -170,7 +167,6 @@ export default function ResumePage(): ReactNode {
           </div>
         </section>
 
-        {/* Professional Summary Section */}
         <section className={styles.resumeSection}>
           <Heading as="h2" className={styles.sectionHeading}>
             Professional Summary
@@ -178,7 +174,6 @@ export default function ResumePage(): ReactNode {
           <p className={styles.summaryText}>{professionalSummaryText}</p>
         </section>
 
-        {/* Skills Section */}
         <section className={styles.resumeSection}>
           <Heading as="h2" className={styles.sectionHeading}>
             Skills
@@ -192,7 +187,6 @@ export default function ResumePage(): ReactNode {
           </ul>
         </section>
 
-        {/* Work History Section */}
         <section className={styles.resumeSection} id="work-history">
           <Heading as="h2" className={styles.sectionHeading}>
             Work History
@@ -229,7 +223,6 @@ export default function ResumePage(): ReactNode {
           ))}
         </section>
 
-        {/* Education Section */}
         <section className={styles.resumeSection} id="education">
           <Heading as="h2" className={styles.sectionHeading}>
             Education
@@ -250,7 +243,6 @@ export default function ResumePage(): ReactNode {
           ))}
         </section>
 
-        {/* Certifications Section */}
         <section className={styles.resumeSection} id="certifications">
           <Heading as="h2" className={styles.sectionHeading}>
             Certifications

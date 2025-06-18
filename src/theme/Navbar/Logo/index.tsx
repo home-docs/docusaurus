@@ -1,12 +1,30 @@
+/**
+ * Swizzled NavbarLogo component from Docusaurus classic theme.
+ *
+ * Purpose of Swizzling:
+ * This component was swizzled to implement custom behavior for the navbar logo and title display,
+ * primarily to change the displayed title based on whether the user is on the homepage or another page.
+ *
+ * Key Customizations:
+ * 1. Dynamic Title Display:
+ *    - On the homepage (`/`), the full site title (from `siteConfig.navbar.title`) is displayed.
+ *    - On all other pages, the title displays as "Home" to provide a clear link back to the main page.
+ * 2. Accessibility Enhancement:
+ *    - An `aria-label="Home page"` has been added to the main `Link` component that wraps the logo and title,
+ *      improving navigation for users relying on screen readers.
+ * 3. Local Type Definition:
+ *    - The `Props` type for this component is defined directly within this file.
+ * 4. CSS Class Handling:
+ *    - Uses `clsx` to merge Docusaurus's default `navbar__brand` class with any `className` prop passed to the component.
+ */
 import React, { JSX } from 'react';
 import Link from '@docusaurus/Link';
 import ThemedImage from '@theme/ThemedImage';
 import { useLocation } from '@docusaurus/router';
 import { useThemeConfig } from '@docusaurus/theme-common';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import clsx from 'clsx'; // Import the clsx utility
+import clsx from 'clsx';
 
-// Define the Props type directly to solve the import issue.
 type Props = {
   className?: string;
 };
@@ -41,7 +59,6 @@ export default function NavbarLogo({ className }: Props): JSX.Element {
       to="/"
       target={target}
       aria-label="Home page"
-      // This line is the critical fix
       className={clsx('navbar__brand', className)}>
       {src && (
         <ThemedImage
