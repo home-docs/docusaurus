@@ -60,7 +60,7 @@ const sidebars: SidebarsConfig = {
       items: [
         {
           type: 'category',
-          label: 'GitHub',
+          label: 'GitHub / Git',
           items: [
             {
               type: 'doc',
