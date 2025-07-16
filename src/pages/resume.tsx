@@ -7,10 +7,10 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 import styles from './resume.module.css';
 
-const professionalSummaryText = `Tech Leader with 12+ years’ experience driving software solutions and technical operations. Expert in implementation, DevOps management, and automation. Strong advocate for DevOps strategies, leading automation initiatives, and ensuring robust testing practices. Holds Microsoft Azure Fundamentals and Professional Scrum Master certifications, backed by a comprehensive skill set in Azure DevOps, SQL, and Microsoft technologies. Known for exceptional problem-solving skills and effective communication, fostering collaboration among stakeholders, team members, and clients.`;
+const professionalSummaryText = `A hands-on technology leader with over 12 years of experience specializing in DevOps, process automation, and infrastructure transformation. Proven track record of enhancing efficiency by re-architecting systems to run 95% faster and reducing daily support tickets by over 75%. Successfully led a DevOps and RPA transformation, creating over 40 automations and enabling a team of 5 to manage a workload previously requiring more than 10 engineers. Proficient in modern cloud and automation tools including Azure, Terraform, Ansible, .NET and PowerShell`;
 
 const skillsList = [
-  'Azure DevOps', 'Terraform', 'Ansible', 'PowerShell', 'Bash', 'Docker', '.NET', 'ASP.NET MVC', 'C#', 'SQL Server', 'SSRS', 'SSIS', 'TSQL', 'JIRA', 'Confluence'
+  'Microsoft Azure', 'Terraform', 'Ansible', 'JIRA', '.NET', 'C#', 'WPF', 'MVVM', 'MS SQL Server', 'Oracle', 'PowerShell', 'BluePrism RPA', 'Docker'
 ];
 
 const workHistory = [
@@ -22,42 +22,26 @@ const workHistory = [
         title: 'DevOps Manager',
         dates: 'September 2023 – April 2025',
         responsibilities: [
-          'Lead the implementation, deployment, and integration of solutions to ensure successful delivery, high quality, and sustainability.',
-          'Oversee all aspects of solution deployment and technical operations.',
-          'Manage the DevOps team, including workflow assignment, monitoring, and maintaining quality and efficiency.',
-          'Manage the Robotic Process Automation team to help other teams automate their processes.',
-          'Strategize, build, configure, test, and deploy technology solutions.',
-          'Advocate for DevOps strategies and implementation goals.',
-          'Automate, test, and ensure the maintenance of systems.',
-          'Participate actively in automation testing and its implementation.',
-          'Analyze and approve new code contributions.',
+          'Led the transformation of the DevOps and Robotic Process Automation (RPA) teams, introducing Agile methodologies to a reactive workflow.',
+          'Spearheaded the creation of over 40 automations using Azure, Terraform, Ansible, and BluePrism RPA, enabling a team of 5 to manage the workload of 10+',
+          'Remained deeply hands-on, actively coding, resolving complex technical issues, and overhauling significant undocumented infrastructure.',
         ],
       },
       {
         title: 'Module Lead',
         dates: 'April 2021 – August 2023',
         responsibilities: [
-          'Strategize and prioritize development objectives by collaborating with diverse stakeholders, including Business Analysts, Product Owners, and cross-functional teams.',
-          'Manage the team\'s JIRA board and present tasks to the Change Approval Board for efficient execution.',
-          'Ensure the smooth progression of changes into UAT and Production environments.',
-          'Review and approve new code to enforce established standards for quality control.',
-          'Update and create documentation to ensure complete understanding of application functionalities.',
-          'Supervise the development and service request queues for optimal team efficiency.',
-          'Drive automation, testing, and continuous system maintenance to streamline processes.',
-          'Proactively participate in the automation testing process and its implementation for robust solutions.',
-          'Lead the migration of the legacy ERP platform to a modern .NET Core web application, enhancing technological capabilities.',
+          'As a certified Scrum Master, led the team to reduce daily incoming tickets from 15+ down to 2-3 by implementing root-cause analysis and higher code quality standards.',
+          'Managed the full development lifecycle using JIRA, ensuring timely UAT and production deployments while aligning development objectives with business goals.',
+          'Oversaw all code reviews and managed development/service request queues to optimize team efficiency.',
         ],
       },
       {
         title: 'Senior Software Engineer',
         dates: 'October 2018 – March 2021',
         responsibilities: [
-          'Developed and maintained an ERP system for organization-wide HR and Budgeting.',
-          'Contributed to development and review tasks as an active member of the team.',
-          'Collaborated with Users and Support Teams to diagnose technical issues and provided solutions.',
-          'Conducted root cause analysis for long-standing technical problems.',
-          'Maintained and modernized legacy code to ensure functionality and relevance.',
-          'Identified opportunities for automation and scripted automation tasks using PowerShell.',
+          'Enhanced and stabilized the core ERP system by refactoring legacy ASP.NET code, significantly reducing technical debt and improving application stability.',
+          'Developed a PowerShell script to automate a 2+hour manual error-checking process, reducing its runtime to seconds and scheduling it to proactively resolve issues.',
         ],
       },
     ],
@@ -70,10 +54,9 @@ const workHistory = [
         title: 'Senior Analyst (SDE II)',
         dates: 'March 2017 – October 2018',
         responsibilities: [
-          'Developed and maintained "Direct Commerce" an in-house supply chain management and billing platform, which was instrumental in distributing globally recognized magazines such as National Geographic, People, and Sports Illustrated to hundreds of thousands of individuals worldwide.',
-          'Extracted data from diverse sources, including Oracle, Direct Commerce, and other applications, to generate insightful reports for stakeholders in the business, sales, and finance sectors.',
-          'Collaborated as a dedicated member of the development team and contributed to both ongoing development and enhancement tasks.',
-          'Conducted peer code testing for fellow developers to ensure code quality and consistency.',
+          'Played a hybrid role developing and maintaining a core component of the \'Direct Commerce\' platform for global magazine distribution.',
+          'Generated actionable reports for business units using data from Oracle and other applications to guide decision-making.',
+          'Collaborated with development teams to implement new features and resolve technical issues.',
         ],
       },
     ],
@@ -86,22 +69,17 @@ const workHistory = [
         title: 'Senior Project Engineer',
         dates: 'April 2014 – March 2017',
         responsibilities: [
-          'Collaborated with cross-functional Agile teams to design and deploy components for a financial solutions product using .NET technologies.',
-          'Ensured coding standards, best practices, and architectural guidelines were adhered to throughout the development lifecycle.',
-          'Managed SQL Server databases, emphasizing data integrity, performance, and security.',
-          'Played a pivotal role in QA collaboration, defined test cases, ensured test coverage, and addressed reported issues.',
-          'Mentored junior developers, offering code reviews and guidance, and bolstered the team\'s overall skill set.',
+          'Optimized SQL queries for key financial reports, reducing run-time from over 4 minutes to under 10 seconds.',
+          'Developed \'Easy Restore\', a custom tool that streamlined the database restore process from several hours to under 15 minutes for large 50GB+ databases.',
+          'Designed and deployed a WPF application using the MVVM architectural pattern, ensuring a clean and maintainable codebase.',
         ],
       },
       {
         title: 'Project Engineer',
         dates: 'August 2012 – March 2014',
         responsibilities: [
-          'Oversaw a large-scale web farm with 300+ servers, ensuring optimal performance for a major Canadian e-commerce platform.',
-          'Conducted proactive monitoring and maintenance, identifying potential issues, applying security patches, and executing configuration updates.',
-          'Engaged with diverse teams, including developers and network engineers, for issue resolution and system improvements.',
-          'Analysed server performance data to provide actionable insights for system enhancements.',
-          'Managed on-call duties, offering prompt solutions for urgent issues outside regular hours.',
+          'Maintained the health and performance of a large-scale e-commerce platform by troubleshooting complex issues with cross-functional teams.',
+          'Provided 24/7 on-call support for critical incidents to ensure system stability.',
         ],
       },
     ],
