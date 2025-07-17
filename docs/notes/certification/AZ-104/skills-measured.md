@@ -1,10 +1,11 @@
 ---
 title: Skills Measured
+sidebar_position: 1
 ---
 
 ### Manage Azure identities and governance (20–25%)
 -  Manage Microsoft Entra users and groups
-	- Create users and groups
+	- [Create users and groups](./manage_azure_identities_and_governance/create_users_and_groups.md)
 	- Manage user and group properties
 	- Manage licenses in Microsoft Entra ID
 	- Manage external users

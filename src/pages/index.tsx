@@ -52,18 +52,25 @@ export default function Home(): ReactNode {
         <div className="container padding-vert--lg">
           <div className="row" style={{ justifyContent: 'center' }}>
             <FeatureCard
-              className="col--5" // Set the width to 5 columns
+              className="col--4" // Adjusted width to 4 columns
               title="Home Lab"
               description="Explore the hardware, software, and configurations of my personal home lab setup."
               linkTo="/docs/home-lab"
               icon="🎛️"
             />
             <FeatureCard
-              className="col--5" // Set the width to 5 columns
+              className="col--4" // Adjusted width to 4 columns
               title="Tools & Tech"
               description="Discover guides and notes on Docusaurus, GitHub, Ansible, and other tools."
               linkTo="/docs/tools-technologies"
               icon="🛠️"
+            />
+            <FeatureCard
+              className="col--4" // Adjusted width to 4 columns
+              title="Notes"
+              description="A collection of my notes for various topics, including certifications."
+              linkTo="/docs/notes"
+              icon="📝"
             />
           </div>
         </div>
