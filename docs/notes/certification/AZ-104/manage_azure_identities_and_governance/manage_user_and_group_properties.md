@@ -1,6 +1,7 @@
 ---
 title: Manage User and Group Properties
 sidebar_position: 2
+sidebar_id: 'mainSidebar'
 ---
 
 ## Managing User Properties

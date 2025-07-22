@@ -1,6 +1,7 @@
 ---
 title: Creating Users and Groups
 sidebar_position: 1
+sidebar_id: 'mainSidebar'
 ---
 
 In Azure, user identities and their access and permissions are governed by assigning permissions to individual users or by grouping them into various types of groups. We will go over creating users and groups in azure using various methods and the settings and configuration for each type.
