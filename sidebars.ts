@@ -98,11 +98,11 @@ const sidebars: SidebarsConfig = {
               type: 'category',
               label: 'Manage Azure identities and governance',
               items: [
-                {
-                  type: 'doc',
-                  id: 'notes/certification/az-104/manage_azure_identities_and_governance/create_users_and_groups',
-                  label: 'Create users and groups',
-                },
+                // {
+                //   type: 'doc',
+                //   id: 'notes/certification/az-104/manage_azure_identities_and_governance/create_users_and_groups',
+                //   label: 'Create users and groups',
+                // },
                 {
                   type: 'doc',
                   id: 'notes/certification/az-104/manage_azure_identities_and_governance/manage_user_and_group_properties',
