@@ -49,14 +49,14 @@
   --h6-color: #ff2056; /* rose-500 */
   --strong-color: #ff82b2; /* pink from things obsidian theme*/
 }
-/* --- Global Styles for headers and bold text--- */
-h1 { color: var(--h1-color); }
-h2 { color: var(--h2-color); }
-h3 { color: var(--h3-color); }
-h4 { color: var(--h4-color); }
-h5 { color: var(--h5-color); }
-h6 { color: var(--h6-color); }
-strong { color: var(--strong-color); }
+/* --- Scoped styles for headers and bold text in docs --- */
+.plugin-docs h1 { color: var(--h1-color); }
+.plugin-docs h2 { color: var(--h2-color); }
+.plugin-docs h3 { color: var(--h3-color); }
+.plugin-docs h4 { color: var(--h4-color); }
+.plugin-docs h5 { color: var(--h5-color); }
+.plugin-docs h6 { color: var(--h6-color); }
+.plugin-docs strong { color: var(--strong-color); }
 
 
 /* --- Global Page & Theme Transition --- */
