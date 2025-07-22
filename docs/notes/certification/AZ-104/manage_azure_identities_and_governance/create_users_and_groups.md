@@ -1,5 +1,6 @@
 ---
 title: Creating Users and Groups
+sidebar_position: 1
 ---
 
 In Azure, user identities and their access and permissions are governed by assigning permissions to individual users or by grouping them into various types of groups. We will go over creating users and groups in azure using various methods and the settings and configuration for each type.
@@ -36,7 +37,7 @@ Directory Synchronized Users are identities that originate in a traditional on-p
 - **Common Use Cases:**
 	- **Hybrid Environments:** This is the standard for any organization that has an existing on-premises AD and wants to extend its identity services to Microsoft Azure or Microsoft 365. 
 	- **Seamless Single Sign-On (SSO):** It allows employees to use their one, familiar corporate username and password to access all company resources, whether they are in the cloud or on-premises.
-- **How they're managed:
+- **How they're managed:**
 	- As an administrator, you'll spend your time managing these users in the "Active Directory Users and Computers" tool on a domain controller. To enable features like Self-Service Password Reset (SSPR) from the cloud for these users, you must enable a premium feature in Microsoft Entra Connect called **password writeback**.
 - Additional Reading: [What is hybrid identity with Microsoft Entra ID?](https://learn.microsoft.com/en-us/entra/identity/hybrid/whatis-hybrid-identity)
 #### Guest Users (B2B)
@@ -268,8 +269,9 @@ The primary drawback of assigned membership is that it doesn't scale well. In a 
 #### Dynamic User
 A **Dynamic User** group is a type of group in Microsoft Entra ID where membership is determined **automatically** based on a predefined set of **membership rules**. Instead of manually managing a list of members, you define the criteria, and Entra ID does the work of keeping the group's membership up-to-date.
 
-> [!WARNING] Licensing
-> **Dynamic groups are a premium feature**. To create and use a dynamic group, your tenant must have an active **Microsoft Entra ID P1 or P2 license**.
+:::warning Licensing
+**Dynamic groups are a premium feature**. To create and use a dynamic group, your tenant must have an active **Microsoft Entra ID P1 or P2 license**.
+:::
 
 You configure a rule that queries the attributes of user objects. Microsoft Entra ID periodically evaluates all users against this rule:
 - If a user's attributes **match** the rule, they are automatically **added** to the group.    
