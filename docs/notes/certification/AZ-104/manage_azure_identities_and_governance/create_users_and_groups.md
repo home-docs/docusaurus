@@ -208,7 +208,7 @@ If you attempt to assign a license to a user without a Usage Location, the opera
 	**No Usage Location = No Paid License**. If you are troubleshooting why a user isn't getting access to a service like Teams or Office, one of the first things you should check is whether their Usage Location is correctly set on their user object.
 	:::
 
-- Additional Reading: [Add or update a user's profile information](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-104)
+- Additional Reading: [Add or update a user's profile information](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/AZ-104)
 ## Creating and Managing Groups
 
 ### Group Types
