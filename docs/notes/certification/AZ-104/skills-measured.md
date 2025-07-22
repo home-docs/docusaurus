@@ -1,6 +1,7 @@
 ---
 title: Skills Measured
 sidebar_position: 1
+sidebar_id: 'mainSidebar'
 ---
 
 ### Manage Azure identities and governance (20–25%)
