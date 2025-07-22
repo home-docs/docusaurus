@@ -169,7 +169,6 @@ The process is very direct. You first log in to your Azure account and then exec
 
 	For a seamless cloud experience, the best practice is to ensure the user's UPN is updated to a routable domain (`davis.ray@yourcompany.com`) before or during synchronization with Microsoft Entra Connect. If the UPN and email are different, it can lead to user confusion about which identity to use for signing in. As an admin, if a user reports a login issue, checking that they are using their correct UPN is a fundamental troubleshooting step.
 
-	For a seamless cloud experience, the best practice is to ensure the user's UPN is updated to a routable domain (`davis.ray@yourcompany.com`) before or during synchronization with Microsoft Entra Connect. If the UPN and email are different, it can lead to user confusion about which identity to use for signing in. As an admin, if a user reports a login issue, checking that they are using their correct UPN is a fundamental troubleshooting step.
 	:::
 
 - Additional Reading: [User Principal Name in Microsoft Entra ID](https://learn.microsoft.com/en-us/entra/identity/hybrid/connect/plan-connect-userprincipalname)
