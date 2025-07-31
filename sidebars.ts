@@ -1,4 +1,4 @@
-import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
+import type { SidebarsConfig } from '@docusaurus/plugin-content-docs';
 
 const sidebars: SidebarsConfig = {
   mainSidebar: [
@@ -82,35 +82,75 @@ const sidebars: SidebarsConfig = {
       link: {
         type: 'generated-index',
         title: 'Notes',
-        description: 'A collection of my notes for various topics, including certifications.',
+        description: 'Notes on various topics.',
         slug: '/notes',
       },
       items: [
         {
           type: 'category',
-          label: 'AZ-104',
+          label: 'Certification',
           link: {
-            type: 'doc',
-            id: 'notes/certification/AZ-104/skills-measured',
+            type: 'generated-index',
+            title: 'Certification',
+            description: 'Notes and resources for certifications.',
+            slug: '/notes/certification',
           },
           items: [
             {
               type: 'category',
-              label: 'Manage Azure identities and governance',
+              label: 'AZ-104',
+              link: {
+                type: 'doc',
+                id: 'notes/certification/AZ-104/skills-measured',
+              },
               items: [
                 {
-                  type: 'doc',
-                  id: 'notes/certification/AZ-104/manage_azure_identities_and_governance/create_users_and_groups',
-                  label: 'Create users and groups',
-                },
-                {
-                  type: 'doc',
-                  id: 'notes/certification/AZ-104/manage_azure_identities_and_governance/manage_user_and_group_properties',
-                  label: 'Manage user and group properties',
+                  type: 'category',
+                  label: 'Manage Azure identities and governance',
+                  items: [
+                    {
+                      type: 'category',
+                      label: 'Microsoft Entra Users and Groups',
+                      items: [
+                        {
+                          type: 'category',
+                          label: 'Create users and groups',
+                          link: {
+                            type: 'generated-index',
+                            title: 'Create users and groups',
+                            description: 'Create and manage users and groups in Microsoft Entra ID.',
+                          },
+                          items: [
+                            'notes/certification/AZ-104/Identity_and_Governance/Entra_Users_and_Groups/User_Creation',
+                            'notes/certification/AZ-104/Identity_and_Governance/Entra_Users_and_Groups/Group_Creation',
+                            'notes/certification/AZ-104/Identity_and_Governance/Entra_Users_and_Groups/Dynamic_Group_Membership',
+                            'notes/certification/AZ-104/Identity_and_Governance/Entra_Users_and_Groups/Bulk_Import',
+                            'notes/certification/AZ-104/Identity_and_Governance/Entra_Users_and_Groups/SCIM_User_Provisioning',
+                          ],
+                        },
+                        {
+                          type: 'category',
+                          label: 'Manage user and group properties',
+                          link: {
+                            type: 'generated-index',
+                            title: 'Manage user and group properties',
+                            description: 'Modify user and group properties in Microsoft Entra ID.',
+                          },
+                          items: [
+                            'notes/certification/AZ-104/Identity_and_Governance/Entra_Users_and_Groups/Modify_User_Details',
+                            'notes/certification/AZ-104/Identity_and_Governance/Entra_Users_and_Groups/Group_Membership_Management',
+                            'notes/certification/AZ-104/Identity_and_Governance/Entra_Users_and_Groups/Reset_Passwords',
+                            'notes/certification/AZ-104/Identity_and_Governance/Entra_Users_and_Groups/Change_UPN',
+                            'notes/certification/AZ-104/Identity_and_Governance/Entra_Users_and_Groups/Group_Expiration',
+                          ],
+                        },
+                      ],
+                    },
+                  ],
                 },
               ],
             },
-          ],
+          ]
         },
       ],
     },
