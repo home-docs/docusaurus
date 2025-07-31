@@ -5,7 +5,7 @@ sidebar_id: 'mainSidebar'
 ---
 ## Manage Azure identities and governance (20–25%)
 
-- ### Manage Microsoft Entra users and groups
+### Manage Microsoft Entra users and groups
 
 - Create users and groups
   - [User creation in Microsoft Entra portal, PowerShell, and CLI](./Identity_and_Governance/Entra_Users_and_Groups/User_Creation.md)
@@ -37,7 +37,7 @@ sidebar_id: 'mainSidebar'
   - Review SSPR audit logs
   - Password writeback for hybrid users
 
-- ### Manage access to Azure resources
+### Manage access to Azure resources
 
 - Manage built-in Azure roles
   - Reader, Contributor, Owner, User Access Administrator
@@ -53,7 +53,7 @@ sidebar_id: 'mainSidebar'
   - Use Access Control (IAM) blade
   - Analyze activity logs and role assignments
 
-- ### Manage Azure subscriptions and governance
+### Manage Azure subscriptions and governance
 
 - Implement and manage Azure Policy
   - Assign built-in and custom policies
@@ -88,7 +88,7 @@ sidebar_id: 'mainSidebar'
 
 ## Implement and manage storage (15–20%)
 
-- ### Configure access to storage
+### Configure access to storage
 
 - Configure Azure Storage firewalls and virtual networks
   - Configure trusted services
@@ -115,7 +115,7 @@ sidebar_id: 'mainSidebar'
   - NTFS permissions for mounted file shares
   - Configure Kerberos authentication
 
-- ### Configure and manage storage accounts
+### Configure and manage storage accounts
 
 - Create and configure storage accounts
   - Choose performance (Standard vs. Premium)
@@ -142,7 +142,7 @@ sidebar_id: 'mainSidebar'
   - Authenticate AzCopy with SAS, OAuth, or keys
   - Sync directories and copy between accounts
 
-- ### Configure Azure Files and Azure Blob Storage
+### Configure Azure Files and Azure Blob Storage
 
 - Create and configure a file share in Azure Storage
   - Standard vs. Premium file shares
@@ -176,7 +176,7 @@ sidebar_id: 'mainSidebar'
 
 ## Deploy and manage Azure compute resources (20–25%)
 
-- ### Automate deployment of resources by using Azure Resource Manager (ARM) templates or Bicep files
+### Automate deployment of resources by using Azure Resource Manager (ARM) templates or Bicep files
 
 - Interpret an Azure Resource Manager template or a Bicep file
   - Understand schema, parameters, variables, resources, outputs
@@ -200,7 +200,7 @@ sidebar_id: 'mainSidebar'
   - Use Visual Studio Code to convert JSON to Bicep
   - Use bicep decompile CLI command
 
-- ### Create and configure virtual machines
+### Create and configure virtual machines
 
 - Create a virtual machine
   - Choose VM image, size, and region
@@ -234,7 +234,7 @@ sidebar_id: 'mainSidebar'
   - Use custom images or shared gallery
   - Monitor instance health and status
 
-- ### Provision and manage containers in the Azure portal
+### Provision and manage containers in the Azure portal
 
 - Create and manage an Azure container registry
   - Enable admin access
@@ -256,7 +256,7 @@ sidebar_id: 'mainSidebar'
   - Use KEDA for event-based scaling (Container Apps)
   - Manual and auto-scaling in ACI and ACA
 
-- ### Create and configure Azure App Service
+### Create and configure Azure App Service
 
 - Provision an App Service plan
   - Choose tier (Free, Shared, Basic, Standard, Premium)
@@ -293,7 +293,7 @@ sidebar_id: 'mainSidebar'
 
 ## Implement and manage virtual networking (15–20%)
 
-- ### Configure and manage virtual networks in Azure
+### Configure and manage virtual networks in Azure
 
 - Create and configure virtual networks and subnets
   - Define address spaces and subnet ranges
@@ -321,7 +321,7 @@ sidebar_id: 'mainSidebar'
   - Analyze Effective Security Rules
   - Trace routes and resolve DNS
 
-- ### Configure secure access to virtual networks
+### Configure secure access to virtual networks
 
 - Create and configure network security groups (NSGs) and application security groups
   - Create NSGs and assign to subnets or NICs
@@ -348,7 +348,7 @@ sidebar_id: 'mainSidebar'
   - Manage network policies for private link subnets
   - Use DNS to resolve resource via private IP
 
-- ### Configure name resolution and load balancing
+### Configure name resolution and load balancing
 
 - Configure Azure DNS
   - Create public or private DNS zones
@@ -368,7 +368,7 @@ sidebar_id: 'mainSidebar'
 
 ## Monitor and maintain Azure resources (10–15%)
 
-- ### Monitor resources in Azure
+### Monitor resources in Azure
 
 - Interpret metrics in Azure Monitor
   - Analyze charts for CPU, memory, disk, network
@@ -401,7 +401,7 @@ sidebar_id: 'mainSidebar'
   - Analyze topology and IP flow
   - Capture packets and run latency tests
 
-- ### Implement backup and recovery
+### Implement backup and recovery
 
 - Create a Recovery Services vault
   - Choose region and redundancy (GRS/LRS)
