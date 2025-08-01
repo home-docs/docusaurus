@@ -20,7 +20,7 @@
   - Use `Update-MgUser` to modify attributes
   - Example:
 
-    ``` PowerShell
+    ```powershell title="PowerShell"
     Update-MgUser -UserId johndoe@contoso.com -JobTitle "Marketing Manager" -Department "Marketing"
     ```
 
@@ -28,7 +28,7 @@
   - Use `az ad user update`
   - Example:
 
-    ``` Bash
+    ```bash title="Shell"
     az ad user update --id johndoe@contoso.com --department "Marketing" --job-title "Manager"  
     ```
 
@@ -43,7 +43,7 @@
   - Should be set using ISO 2-letter country code (e.g., `US`, `IN`)
   - Example:
 
-    ``` PowerShell
+    ```powershell title="PowerShell"
     Update-MgUser -UserId johndoe@contoso.com -UsageLocation "US"
     ```
 

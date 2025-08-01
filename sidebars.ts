@@ -144,6 +144,53 @@ const sidebars: SidebarsConfig = {
                             'notes/certification/AZ-104/Identity_and_Governance/Entra_Users_and_Groups/Group_Expiration',
                           ],
                         },
+                        {
+                          type: 'category',
+                          label: 'Manage licenses in Microsoft Entra ID',
+                          link: {
+                            type: 'generated-index',
+                            title: 'Manage licenses in Microsoft Entra ID',
+                            description: 'Manage licenses for users and groups in Microsoft Entra ID.',
+                          },
+                          items: [
+                            'notes/certification/AZ-104/Identity_and_Governance/Entra_Users_and_Groups/License_Assignment',
+                            'notes/certification/AZ-104/Identity_and_Governance/Entra_Users_and_Groups/Group_Licensing',
+                            'notes/certification/AZ-104/Identity_and_Governance/Entra_Users_and_Groups/Licensing_Conflicts',
+                            'notes/certification/AZ-104/Identity_and_Governance/Entra_Users_and_Groups/License_Error_Troubleshooting',
+                          ],
+                        },
+                        {
+                          type: 'category',
+                          label: 'Manage external users',
+                          link: {
+                            type: 'generated-index',
+                            title: 'Manage external users',
+                            description: 'Manage external users in Microsoft Entra ID.',
+                          },
+                          items: [
+                            'notes/certification/AZ-104/Identity_and_Governance/Entra_Users_and_Groups/Add_Guest_Users',
+                            'notes/certification/AZ-104/Identity_and_Governance/Entra_Users_and_Groups/Invitation_Settings',
+                            'notes/certification/AZ-104/Identity_and_Governance/Entra_Users_and_Groups/Guest_Redeem_Process',
+                            'notes/certification/AZ-104/Identity_and_Governance/Entra_Users_and_Groups/External_Collaboration',
+                            'notes/certification/AZ-104/Identity_and_Governance/Entra_Users_and_Groups/Manage_Guest_User_Properties',
+                          ],
+                        },
+                        {
+                          type: 'category',
+                          label: 'Configure self-service password reset (SSPR)',
+                          link: {
+                            type: 'generated-index',
+                            title: 'Configure self-service password reset (SSPR)',
+                            description: 'Set up and manage self-service password reset for users in Microsoft Entra ID.',
+                          },
+                          items: [
+                            'notes/certification/AZ-104/Identity_and_Governance/Entra_Users_and_Groups/Enable_SSPR',
+                            'notes/certification/AZ-104/Identity_and_Governance/Entra_Users_and_Groups/SSPR_Auth_Methods',
+                            'notes/certification/AZ-104/Identity_and_Governance/Entra_Users_and_Groups/SSPR_Branding',
+                            'notes/certification/AZ-104/Identity_and_Governance/Entra_Users_and_Groups/SSPR_Audit_Logs',
+                            'notes/certification/AZ-104/Identity_and_Governance/Entra_Users_and_Groups/Password_Writeback',
+                          ],
+                        },
                       ],
                     },
                   ],

@@ -18,24 +18,24 @@ sidebar_id: 'mainSidebar'
   - [Group membership management](./Identity_and_Governance/Entra_Users_and_Groups/Group_Membership_Management.md)
   - [Reset user passwords](./Identity_and_Governance/Entra_Users_and_Groups/Reset_Passwords.md)
   - [User principal name (UPN) changes](./Identity_and_Governance/Entra_Users_and_Groups/Change_UPN.md)
-  - [Group expiration policies](./Identity_and_Governance/Entra_Users_and_Groups/Group_Expiration)
+  - [Group expiration policies](./Identity_and_Governance/Entra_Users_and_Groups/Group_Expiration.md)
 - Manage licenses in Microsoft Entra ID
-  - Assign product licenses to users and groups
-  - Configure group-based licensing
-  - Resolve licensing conflicts
-  - View and interpret license assignment errors
+  - [Assign product licenses to users and groups](./Identity_and_Governance/Entra_Users_and_Groups/License_Assignment.md)
+  - [Configure group-based licensing](./Identity_and_Governance/Entra_Users_and_Groups/Group_Licensing.md)
+  - [Resolve licensing conflicts](./Identity_and_Governance/Entra_Users_and_Groups/Licensing_Conflicts.md)
+  - [View and interpret license assignment errors](./Identity_and_Governance/Entra_Users_and_Groups/License_Error_Troubleshooting.md)
 - Manage external users
-  - Add B2B guest users
-  - Configure invitation settings
-  - Redeem invitation process
-  - External collaboration settings (cross-tenant access)
-  - Manage external user properties
+  - [Add B2B guest users](./Identity_and_Governance/Entra_Users_and_Groups/Add_Guest_Users.md)
+  - [Configure invitation settings](./Identity_and_Governance/Entra_Users_and_Groups/Invitation_Settings.md)
+  - [Redeem invitation process](./Identity_and_Governance/Entra_Users_and_Groups/Guest_Redeem_Process.md)
+  - [External collaboration settings](./Identity_and_Governance/Entra_Users_and_Groups/External_Collaboration.md)
+  - [Manage external user properties](./Identity_and_Governance/Entra_Users_and_Groups/Manage_Guest_User_Properties.md)
 - Configure self-service password reset (SSPR)
-  - Enable/disable SSPR for users or groups
-  - Configure authentication methods
-  - Customize notifications and branding
-  - Review SSPR audit logs
-  - Password writeback for hybrid users
+  - [Enable/disable SSPR for users or groups](./Identity_and_Governance/Entra_Users_and_Groups/Enable_SSPR.md)
+  - [Configure authentication methods](./Identity_and_Governance/Entra_Users_and_Groups/SSPR_Auth_Methods.md)
+  - [Customize notifications and branding](./Identity_and_Governance/Entra_Users_and_Groups/SSPR_Branding.md)
+  - [Review SSPR audit logs](./Identity_and_Governance/Entra_Users_and_Groups/SSPR_Audit_Logs.md)
+  - [Password writeback for hybrid users](./Identity_and_Governance/Entra_Users_and_Groups/Password_Writeback.md)
 
 ### Manage access to Azure resources
 
