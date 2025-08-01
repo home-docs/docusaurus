@@ -107,10 +107,20 @@ const sidebars: SidebarsConfig = {
                 {
                   type: 'category',
                   label: 'Manage Azure identities and governance',
+                  link: {
+                    type: 'generated-index',
+                    title: 'Manage Azure identities and governance',
+                    description: 'Learn how to manage Azure identities and governance in Microsoft Entra ID.',
+                  },
                   items: [
                     {
                       type: 'category',
                       label: 'Microsoft Entra Users and Groups',
+                      link: {
+                        type: 'generated-index',
+                        title: 'Microsoft Entra Users and Groups',
+                        description: 'Manage users and groups in Microsoft Entra ID.',
+                      },
                       items: [
                         {
                           type: 'category',
