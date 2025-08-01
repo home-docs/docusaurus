@@ -1,8 +1,12 @@
 /*
  * Docusaurus Custom Styles
+ * Last updated: 2025-08-01
 */
 
-/* --- Theme Color Variables --- */
+/* ===============================
+   Theme Color Variables
+   =============================== */
+
 :root {
   --ifm-color-primary: #172554;
   --ifm-color-primary-dark: #15214c;
@@ -19,14 +23,14 @@
   --ifm-card-box-shadow: var(--ifm-global-shadow-xs);
   --ifm-navbar-height: 80px;
 
-  /* --- Tailwind v4 Colors (Light Mode) --- */
-  --h1-color: #312c85; /* indigo-950 */
-  --h2-color: #2f0d68; /* violet-950 */
-  --h3-color: #3c0366; /* purple-950 */
-  --h4-color: #4b004f; /* fuchsia-950 */
-  --h5-color: #510424; /* pink-950 */
-  --h6-color: #4d0218; /* Rose-950 */
-  --strong-color: #ff82b2; /* pink from things obsidian theme*/
+  /* Tailwind v4 Colors (Light Mode) */
+  --h1-color: #312c85;
+  --h2-color: #2f0d68;
+  --h3-color: #3c0366;
+  --h4-color: #4b004f;
+  --h5-color: #510424;
+  --h6-color: #4d0218;
+  --strong-color: #ff82b2;
 }
 
 [data-theme='dark'] {
@@ -40,16 +44,20 @@
   --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.12);
   --ifm-card-background-color: #424242;
 
-  /* --- Tailwind v4 Colors (Dark Mode) --- */
-  --h1-color: #615fff; /* indigo-500 */
-  --h2-color: #8e51ff; /* violet-500 */
-  --h3-color: #ad46ff; /* purple-500 */
-  --h4-color: #e12afb; /* fuchsia-500 */
-  --h5-color: #f6339a; /* pink-500 */
-  --h6-color: #ff2056; /* rose-500 */
-  --strong-color: #ff82b2; /* pink from things obsidian theme*/
+  /* Tailwind v4 Colors (Dark Mode) */
+  --h1-color: #615fff;
+  --h2-color: #8e51ff;
+  --h3-color: #ad46ff;
+  --h4-color: #e12afb;
+  --h5-color: #f6339a;
+  --h6-color: #ff2056;
+  --strong-color: #ff82b2;
 }
-/* --- Scoped styles for headers and bold text in docs --- */
+
+/* ===============================
+   Header and Text Styling
+   =============================== */
+
 .plugin-docs h1 { color: var(--h1-color); }
 .plugin-docs h2 { color: var(--h2-color); }
 .plugin-docs h3 { color: var(--h3-color); }
@@ -58,22 +66,16 @@
 .plugin-docs h6 { color: var(--h6-color); }
 .plugin-docs strong { color: var(--strong-color); }
 
-
-/* --- Global Page & Theme Transition --- */
-/* Uses the experimental View Transitions API */
-::view-transition-old(root) {
-  animation: 300ms cubic-bezier(0.4, 0, 0.2, 1) both docusaurus-fade-out;
+li > p {
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
-::view-transition-new(root) {
-  animation: 300ms cubic-bezier(0.4, 0, 0.2, 1) both docusaurus-fade-in;
-}
-@keyframes docusaurus-fade-out { to { opacity: 0; } }
-@keyframes docusaurus-fade-in { from { opacity: 0; } }
 
+/* ===============================
+   Navbar Styling
+   =============================== */
 
-/* --- Navbar Styles --- */
 .navbar {
-  /* Change positioning from sticky to fixed */
   position: fixed;
   top: 1rem;
   left: 50%;
@@ -91,19 +93,20 @@
 }
 
 .main-wrapper {
-  padding-top: calc(var(--ifm-navbar-height) + 2rem); /* Navbar height + top margin + extra space */
+  padding-top: calc(var(--ifm-navbar-height) + 2rem);
 }
 
-/* --- Homepage Hero Section --- */
+/* ===============================
+   Hero Section (Homepage)
+   =============================== */
+
 .hero.hero--primary {
   width: 76.2%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1.5rem;
+  margin: 0 auto 1.5rem auto;
   border-radius: 12px;
   position: relative;
   overflow: hidden;
-  color: #FFFFFF;
+  color: #fff;
   background-color: transparent;
 }
 
@@ -120,27 +123,23 @@
   background-position: center;
 }
 
-/* Light Theme Hero Image Layer */
 [data-theme='light'] .hero.hero--primary::before {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    url('/img/hero-background-light.jpeg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/img/hero-background-light.jpeg');
   opacity: 1;
 }
-[data-theme='dark'] .hero.hero--primary::before {
-  opacity: 0;
-}
 
-/* Dark Theme Hero Image Layer */
-[data-theme='light'] .hero.hero--primary::after {
-  opacity: 0;
-}
+[data-theme='dark'] .hero.hero--primary::before { opacity: 0; }
+[data-theme='light'] .hero.hero--primary::after { opacity: 0; }
+
 [data-theme='dark'] .hero.hero--primary::after {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url('/img/hero-background-dark.jpeg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/img/hero-background-dark.jpeg');
   opacity: 1;
 }
 
-/* --- Card Styles --- */
+/* ===============================
+   Card Styling
+   =============================== */
+
 .col .card {
   height: 100%;
   display: flex;
@@ -152,7 +151,6 @@
 }
 
 .card {
-  /* This transition is only for the hover effect */
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
@@ -161,8 +159,70 @@
   box-shadow: var(--ifm-global-shadow-lw);
 }
 
-/*Fix for random empty lines in bullet lists*/
-li > p {
-  margin-block-start: 0;
-  margin-block-end: 0;
+/* ===============================
+   Sidebar Styling
+   =============================== */
+
+/* Sidebar link text */
+.menu__link,
+.menu__list-item > .menu__link--sublist {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+/* Remove arrows (collapse/expand carets) */
+.menu__caret,
+.menu__link--sublist-caret {
+  display: none !important;
+}
+
+/* Sidebar indentation levels */
+.menu__list-item,
+.menu__link {
+  padding-left: 0 !important;
+}
+
+/* Level 1 indent */
+.menu__list > .menu__list-item,
+.menu__list > .menu__list-item > .menu__link {
+  padding-left: 0.5rem;
+}
+
+/* Level 2 indent */
+.menu__list .menu__list > .menu__list-item,
+.menu__list .menu__list > .menu__list-item > .menu__link {
+  padding-left: 1rem;
+}
+
+/* Level 3 indent */
+.menu__list .menu__list .menu__list > .menu__list-item,
+.menu__list .menu__list .menu__list > .menu__list-item > .menu__link {
+  padding-left: 1.5rem;
+}
+
+/* Sidebar transitions (graceful open/close animations) */
+.menu__list,
+.menu__list-item,
+.menu__link {
+  transition: all 0.3s ease-in-out;
+}
+
+/* ===============================
+   Page Transitions (View API)
+   =============================== */
+
+::view-transition-old(root) {
+  animation: 300ms cubic-bezier(0.4, 0, 0.2, 1) both docusaurus-fade-out;
+}
+
+::view-transition-new(root) {
+  animation: 300ms cubic-bezier(0.4, 0, 0.2, 1) both docusaurus-fade-in;
+}
+
+@keyframes docusaurus-fade-out {
+  to { opacity: 0; }
+}
+
+@keyframes docusaurus-fade-in {
+  from { opacity: 0; }
 }
