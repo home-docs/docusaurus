@@ -40,18 +40,18 @@ sidebar_id: 'mainSidebar'
 ### Manage access to Azure resources
 
 - Manage built-in Azure roles
-  - Reader, Contributor, Owner, User Access Administrator
-  - Understand least privilege principle
-  - Custom role creation basics
+  - [Reader, Contributor, Owner, User Access Administrator](./Identity_and_Governance/Access_to_Resources/Builtin_Roles.md)
+  - [Understand least privilege principle](./Identity_and_Governance/Access_to_Resources/Least_Privilege.md)
+  - [Custom role creation basics](./Identity_and_Governance/Access_to_Resources/Custom_Role_Basics.md)
 - Assign roles at different scopes
-  - Resource, resource group, subscription, management group
-  - Use of Azure portal, CLI, and PowerShell
-  - Role inheritance behavior
+  - [Resource, resource group, subscription, management group](./Identity_and_Governance/Access_to_Resources/Role_Assignment_Scope.md)
+  - [Use of Azure portal, CLI, and PowerShell](./Identity_and_Governance/Access_to_Resources/Role_Assignment_Tools.md)
+  - [Role inheritance behavior](./Identity_and_Governance/Access_to_Resources/Role_Inheritance.md)
 - Interpret access assignments
-  - Review role assignments in portal
-  - Identify effective permissions
-  - Use Access Control (IAM) blade
-  - Analyze activity logs and role assignments
+  - [Review role assignments in portal](./Identity_and_Governance/Access_to_Resources/View_Role_Assignments.md)
+  - [Identify effective permissions](./Identity_and_Governance/Access_to_Resources/Effective_Permissions.md)
+  - [Use Access Control (IAM) blade](./Identity_and_Governance/Access_to_Resources/IAM_Blade_Usage.md)
+  - [Analyze activity logs and role assignments](./Identity_and_Governance/Access_to_Resources/Analyze_Role_Assignments.md)
 
 ### Manage Azure subscriptions and governance
 

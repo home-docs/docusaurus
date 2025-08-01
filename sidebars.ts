@@ -115,10 +115,10 @@ const sidebars: SidebarsConfig = {
                   items: [
                     {
                       type: 'category',
-                      label: 'Microsoft Entra Users and Groups',
+                      label: 'Manage Microsoft Entra Users and Groups',
                       link: {
                         type: 'generated-index',
-                        title: 'Microsoft Entra Users and Groups',
+                        title: 'Manage Microsoft Entra Users and Groups',
                         description: 'Manage users and groups in Microsoft Entra ID.',
                       },
                       items: [
@@ -200,6 +200,60 @@ const sidebars: SidebarsConfig = {
                             'notes/certification/AZ-104/Identity_and_Governance/Entra_Users_and_Groups/SSPR_Audit_Logs',
                             'notes/certification/AZ-104/Identity_and_Governance/Entra_Users_and_Groups/Password_Writeback',
                           ],
+                        },
+                      ],
+                    },
+                    {
+                      type: 'category',
+                      label: 'Manage access to Azure resources',
+                      link: {
+                        type: 'generated-index',
+                        title: 'Manage access to Azure resources',
+                        description: 'Manage access to Azure resources using built-in roles and custom roles in Microsoft Entra ID.',
+                      },
+                      items: [
+                        {
+                          type: 'category',
+                          label: 'Manage built-in Azure roles',
+                          link: {
+                            type: 'generated-index',
+                            title: 'Manage built-in Azure roles',
+                            description: 'Manage built-in Azure roles in Microsoft Entra ID.',
+                          },
+                          items: [
+                            'notes/certification/AZ-104/Identity_and_Governance/Access_to_Resources/Builtin_Roles',
+                            'notes/certification/AZ-104/Identity_and_Governance/Access_to_Resources/Least_Privilege',
+                            'notes/certification/AZ-104/Identity_and_Governance/Access_to_Resources/Custom_Role_Basics',
+                          ]
+                        },
+                        {
+                          type: 'category',
+                          label: 'Assign roles at different scopes',
+                          link: {
+                            type: 'generated-index',
+                            title: 'Assign roles at different scopes',
+                            description: 'Assign roles at different scopes in Microsoft Entra ID.',
+                          },
+                          items: [
+                            'notes/certification/AZ-104/Identity_and_Governance/Access_to_Resources/Role_Assignment_Scope',
+                            'notes/certification/AZ-104/Identity_and_Governance/Access_to_Resources/Role_Assignment_Tools',
+                            'notes/certification/AZ-104/Identity_and_Governance/Access_to_Resources/Role_Inheritance',
+                          ]
+                        },
+                        {
+                          type: 'category',
+                          label: 'Interpret access assignments',
+                          link: {
+                            type: 'generated-index',
+                            title: 'Interpret access assignments',
+                            description: 'Interpret access assignments in Microsoft Entra ID.',
+                          },
+                          items: [
+                            'notes/certification/AZ-104/Identity_and_Governance/Access_to_Resources/View_Role_Assignments',
+                            'notes/certification/AZ-104/Identity_and_Governance/Access_to_Resources/Effective_Permissions',
+                            'notes/certification/AZ-104/Identity_and_Governance/Access_to_Resources/IAM_Blade_Usage',
+                            'notes/certification/AZ-104/Identity_and_Governance/Access_to_Resources/Analyze_Role_Assignments',
+                          ]
                         },
                       ],
                     },
