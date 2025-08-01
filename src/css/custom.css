@@ -71,6 +71,17 @@ li > p {
   margin-block-end: 0;
 }
 
+/* Scoped link styling inside doc content only */
+[data-theme='light'] .theme-doc-markdown a {
+  color: #1d4ed8; /* Tailwind blue-700 */
+  transition: color 0.2s ease-in-out;
+}
+
+[data-theme='light'] .theme-doc-markdown a:hover {
+  color: #1e40af; /* Tailwind blue-800 */
+}
+
+
 /* ===============================
    Navbar Styling
    =============================== */
