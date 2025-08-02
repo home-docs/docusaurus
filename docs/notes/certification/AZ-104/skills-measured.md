@@ -56,35 +56,35 @@ sidebar_id: 'mainSidebar'
 ### Manage Azure subscriptions and governance
 
 - Implement and manage Azure Policy
-  - Assign built-in and custom policies
-  - Understand policy effects (Deny, Audit, Append, etc.)
-  - View compliance state
-  - Policy initiative definition and assignment
+  - [Assign built-in and custom policies](./Identity_and_Governance/Subscriptions_and_Governance/Azure_Policy_Basics.md)
+  - [Understand policy effects (Deny, Audit, Append, etc.)](./Identity_and_Governance/Subscriptions_and_Governance/Policy_Effects.md)
+  - [View compliance state](./Identity_and_Governance/Subscriptions_and_Governance/Policy_Compliance.md)
+  - [Policy initiative definition and assignment](./Identity_and_Governance/Subscriptions_and_Governance/Policy_Initiatives.md)
 - Configure resource locks
-  - Create/Delete, CanNotDelete and ReadOnly locks
-  - Inheritance of locks across scopes
-  - Lock impact on automation
+  - [Create/Delete, CanNotDelete and ReadOnly locks](./Identity_and_Governance/Subscriptions_and_Governance/Resource_Locks.md)
+  - [Inheritance of locks across scopes](./Identity_and_Governance/Subscriptions_and_Governance/Lock_Inheritance.md)
+  - [Lock impact on automation](./Identity_and_Governance/Subscriptions_and_Governance/Automation_Lock_Impact.md)
 - Apply and manage tags on resources
-  - Add/edit tags using portal, CLI, ARM/Bicep
-  - Tag inheritance
-  - Use tags for billing
+  - [Add/edit tags using portal, CLI, ARM/Bicep](./Identity_and_Governance/Subscriptions_and_Governance/Tags_Basics.md)
+  - [Tag inheritance](./Identity_and_Governance/Subscriptions_and_Governance/Tag_Inheritance.md)
+  - [Use tags for billing](./Identity_and_Governance/Subscriptions_and_Governance/Tags_for_Billing.md)
 - Manage resource groups
-  - Create/delete resource groups
-  - Move resources between groups
-  - Resource group-level permissions
+  - [Create/delete resource groups](./Identity_and_Governance/Subscriptions_and_Governance/Resource_Groups.md)
+  - [Move resources between groups](./Identity_and_Governance/Subscriptions_and_Governance/Move_Resources.md)
+  - [Resource group-level permissions](./Identity_and_Governance/Subscriptions_and_Governance/RG_Permissions.md)
 - Manage subscriptions
-  - Rename, disable, delete subscriptions
-  - Set subscription policies
-  - Billing management and ownership transfer
+  - [Rename, disable, delete subscriptions](./Identity_and_Governance/Subscriptions_and_Governance/Manage_Subscriptions.md)
+  - [Set subscription policies](./Identity_and_Governance/Subscriptions_and_Governance/Subscription_Policies.md)
+  - [Billing management and ownership transfer](./Identity_and_Governance/Subscriptions_and_Governance/Billing_Transfer.md)
 - Manage costs by using alerts, budgets, and Azure Advisor recommendations
-  - Create and configure budgets
-  - Setup cost alerts
-  - Use Azure Advisor for cost optimization
-  - Analyze cost trends in Cost Management
+  - [Create and configure budgets](./Identity_and_Governance/Subscriptions_and_Governance/Budgets.md)
+  - [Setup cost alerts](./Identity_and_Governance/Subscriptions_and_Governance/Cost_Alerts.md)
+  - [Use Azure Advisor for cost optimization](./Identity_and_Governance/Subscriptions_and_Governance/Azure_Advisor_Costs.md)
+  - [Analyze cost trends in Cost Management](./Identity_and_Governance/Subscriptions_and_Governance/Cost_Trends.md)
 - Configure management groups
-  - Create management group hierarchy
-  - Assign roles and policies at management group level
-  - Link subscriptions to management groups
+  - [Create management group hierarchy](./Identity_and_Governance/Subscriptions_and_Governance/Management_Groups.md)
+  - [Assign roles and policies at management group level](./Identity_and_Governance/Subscriptions_and_Governance/Management_Group_Roles.md)
+  - [Link subscriptions to management groups](./Identity_and_Governance/Subscriptions_and_Governance/Link_Subscriptions.md)
 
 ## Implement and manage storage (15–20%)
 

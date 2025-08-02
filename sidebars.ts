@@ -257,6 +257,117 @@ const sidebars: SidebarsConfig = {
                         },
                       ],
                     },
+                    {
+                      type: 'category',
+                      label: 'Manage Azure subscriptions and governance',
+                      link: {
+                        type: 'generated-index',
+                        title: 'Manage Azure subscriptions and governance',
+                        description: 'Manage Azure subscriptions and governance in Microsoft Entra ID.',
+                      },
+                      items: [
+                        {
+                          type: 'category',
+                          label: 'Implement and manage Azure Policy',
+                          link: {
+                            type: 'generated-index',
+                            title: 'Implement and manage Azure Policy',
+                            description: 'Implement and manage Azure Policy in Microsoft Entra ID.',
+                          },
+                          items: [
+                            'notes/certification/AZ-104/Identity_and_Governance/Subscriptions_and_Governance/Azure_Policy_Basics',
+                            'notes/certification/AZ-104/Identity_and_Governance/Subscriptions_and_Governance/Policy_Effects',
+                            'notes/certification/AZ-104/Identity_and_Governance/Subscriptions_and_Governance/Policy_Compliance',
+                            'notes/certification/AZ-104/Identity_and_Governance/Subscriptions_and_Governance/Policy_Initiatives',
+                          ]
+                        },
+                        {
+                          type: 'category',
+                          label: 'Configure resource locks',
+                          link: {
+                            type: 'generated-index',
+                            title: 'Configure resource locks',
+                            description: 'Configure resource locks in Microsoft Entra ID.',
+                          },
+                          items: [
+                            'notes/certification/AZ-104/Identity_and_Governance/Subscriptions_and_Governance/Resource_Locks',
+                            'notes/certification/AZ-104/Identity_and_Governance/Subscriptions_and_Governance/Lock_Inheritance',
+                            'notes/certification/AZ-104/Identity_and_Governance/Subscriptions_and_Governance/Automation_Lock_Impact',
+                          ]
+                        },
+                        {
+                          type: 'category',
+                          label: 'Apply and manage tags on resources',
+                          link: {
+                            type: 'generated-index',
+                            title: 'Apply and manage tags on resources',
+                            description: 'Apply and manage tags on resources in Microsoft Entra ID.',
+                          },
+                          items: [
+                            'notes/certification/AZ-104/Identity_and_Governance/Subscriptions_and_Governance/Tags_Basics',
+                            'notes/certification/AZ-104/Identity_and_Governance/Subscriptions_and_Governance/Tag_Inheritance',
+                            'notes/certification/AZ-104/Identity_and_Governance/Subscriptions_and_Governance/Tags_for_Billing',
+                          ]
+                        },
+                        {
+                          type: 'category',
+                          label: 'Manage resource groups',
+                          link: {
+                            type: 'generated-index',
+                            title: 'Manage resource groups',
+                            description: 'Manage resource groups in Microsoft Entra ID.',
+                          },
+                          items: [
+                            'notes/certification/AZ-104/Identity_and_Governance/Subscriptions_and_Governance/Resource_Groups',
+                            'notes/certification/AZ-104/Identity_and_Governance/Subscriptions_and_Governance/Move_Resources',
+                            'notes/certification/AZ-104/Identity_and_Governance/Subscriptions_and_Governance/RG_Permissions',
+                          ]
+                        },
+                        {
+                          type: 'category',
+                          label: 'Manage subscriptions',
+                          link: {
+                            type: 'generated-index',
+                            title: 'Manage subscriptions',
+                            description: 'Manage subscriptions in Microsoft Entra ID.',
+                          },
+                          items: [
+                            'notes/certification/AZ-104/Identity_and_Governance/Subscriptions_and_Governance/Manage_Subscriptions',
+                            'notes/certification/AZ-104/Identity_and_Governance/Subscriptions_and_Governance/Subscription_Policies',
+                            'notes/certification/AZ-104/Identity_and_Governance/Subscriptions_and_Governance/Billing_Transfer',
+                          ]
+                        },
+                        {
+                          type: 'category',
+                          label: 'Manage costs by using alerts, budgets, and Azure Advisor recommendations',
+                          link: {
+                            type: 'generated-index',
+                            title: 'Manage costs by using alerts, budgets, and Azure Advisor recommendations',
+                            description: 'Manage costs by using alerts, budgets, and Azure Advisor recommendations in Microsoft Entra ID.',
+                          },
+                          items: [
+                            'notes/certification/AZ-104/Identity_and_Governance/Subscriptions_and_Governance/Budgets',
+                            'notes/certification/AZ-104/Identity_and_Governance/Subscriptions_and_Governance/Cost_Alerts',
+                            'notes/certification/AZ-104/Identity_and_Governance/Subscriptions_and_Governance/Azure_Advisor_Costs',
+                            'notes/certification/AZ-104/Identity_and_Governance/Subscriptions_and_Governance/Cost_Trends',
+                          ]
+                        },
+                        {
+                          type: 'category',
+                          label: 'Configure management groups',
+                          link: {
+                            type: 'generated-index',
+                            title: 'Configure management groups',
+                            description: 'Configure management groups in Microsoft Entra ID.',
+                          },
+                          items: [
+                            'notes/certification/AZ-104/Identity_and_Governance/Subscriptions_and_Governance/Management_Groups',
+                            'notes/certification/AZ-104/Identity_and_Governance/Subscriptions_and_Governance/Management_Group_Roles',
+                            'notes/certification/AZ-104/Identity_and_Governance/Subscriptions_and_Governance/Link_Subscriptions',
+                          ]
+                        },
+                      ],
+                    },
                   ],
                 },
               ],
