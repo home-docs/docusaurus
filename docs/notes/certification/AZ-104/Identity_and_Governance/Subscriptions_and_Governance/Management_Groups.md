@@ -65,4 +65,4 @@ Azure **management groups** provide a top-level scope above subscriptions for ap
 
 :::
 
-Additional Reading: [https://learn.microsoft.com/en-us/azure/governance/management-groups/overview](https://learn.microsoft.com/en-us/azure/governance/management-groups/overview)
+Additional Reading: [What are Azure management groups?](https://learn.microsoft.com/en-us/azure/governance/management-groups/overview)
