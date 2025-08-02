@@ -54,10 +54,14 @@ Role assignments in Azure can be performed through multiple interfaces: the **Az
 - **Audit & Monitoring**
   - All role assignment actions are logged in **Azure Activity Logs**
   - View them under `Monitor > Activity Log` or query via Log Analytics
-- **Best Practices**
-  - Always validate scope before running CLI or PowerShell commands
-  - Use service principals and managed identities over user identities for automation
-  - Combine scripting with CI/CD pipelines for reproducible role setups
+
+:::note[Best Practices]
+
+- Always validate scope before running CLI or PowerShell commands
+- Use service principals and managed identities over user identities for automation
+- Combine scripting with CI/CD pipelines for reproducible role setups
+
+:::
 
 Additional Reading:
 

@@ -33,12 +33,16 @@ Microsoft Entra ID allows you to create multiple users simultaneously using a CS
 - **Automation Alternative**
   - You can script bulk creation using PowerShell (`Import-Csv` + `New-MgUser`)
   - Ideal for customizing attributes or integrating with HR systems
-- **Best Practices**
-  - Validate UPN domain suffix (must be verified domain)
-  - Predefine roles or group assignments in a follow-up step
-  - Sanitize and normalize data before upload (no spaces in UPN, email format)
 - **Audit and Monitoring**
   - Bulk operations are logged in **Audit logs** in Microsoft Entra ID
   - Use filters like `Activity: Add user` for investigation
+
+:::note[Best Practices]
+
+- Validate UPN domain suffix (must be verified domain)
+- Predefine roles or group assignments in a follow-up step
+- Sanitize and normalize data before upload (no spaces in UPN, email format)
+
+:::
 
 Additional Reading: [Bulk create users in the Azure portal - Microsoft Entra ID | Microsoft Learn](https://learn.microsoft.com/en-us/entra/identity/users/users-bulk-add)

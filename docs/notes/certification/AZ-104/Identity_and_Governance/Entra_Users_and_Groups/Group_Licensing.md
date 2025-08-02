@@ -37,10 +37,6 @@ Group-based licensing allows you to assign product licenses to a group, automati
   - You can assign the same license to a user via multiple groups
   - Microsoft Entra merges the licenses without duplicating service plans
   - Direct assignment **overrides** inherited settings (cannot modify inherited settings directly)
-- **Best Practices**
-  - Create **dedicated groups per license SKU** (e.g., “M365-E3-Users”)
-  - Avoid mixing users with differing license needs in the same group
-  - Automate group membership using **dynamic membership rules**
 - **Monitoring and Audit Logs**
   - All license events are tracked in **Audit Logs**
   - Use `Get-MgUserLicenseDetail` to validate user license sources
@@ -48,5 +44,13 @@ Group-based licensing allows you to assign product licenses to a group, automati
 - **Licensing Requirement**
   - Group-based licensing requires **Microsoft Entra ID P1 or above**
   - Included in **Microsoft 365 E3 and E5** plans
+
+:::note[Best Practices]
+
+- Create **dedicated groups per license SKU** (e.g., “M365-E3-Users”)
+- Avoid mixing users with differing license needs in the same group
+- Automate group membership using **dynamic membership rules**
+
+:::
 
 Additional Reading: [What is group-based licensing in Microsoft Entra ID?](https://learn.microsoft.com/en-us/entra/fundamentals/concept-group-based-licensing)

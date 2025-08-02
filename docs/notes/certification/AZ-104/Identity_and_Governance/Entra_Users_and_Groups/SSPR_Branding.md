@@ -29,12 +29,16 @@ Microsoft Entra ID allows you to customize the Self-Service Password Reset (SSPR
   - Background color or image
   - Sign-in page text (e.g., password policy reminder)
   - Custom footer links (e.g., support or helpdesk contact)
-- **Best Practices**
-  - Use branding to help users recognize legitimate Microsoft pages
-  - Include support links or password policy info to reduce IT helpdesk calls
-  - Enable both user and admin notifications to maintain audit readiness
 - **Licensing Requirements**
   - Company branding requires **Microsoft Entra ID P1 or above**
   - Notifications are available in **all supported SSPR configurations**
+
+:::note[Best Practices]
+
+- Use branding to help users recognize legitimate Microsoft pages
+- Include support links or password policy info to reduce IT helpdesk calls
+- Enable both user and admin notifications to maintain audit readiness
+
+:::
 
 Additional Reading: [Customize the user experience for Microsoft Entra self-service password reset](https://learn.microsoft.com/en-us/entra/identity/authentication/howto-sspr-customization)

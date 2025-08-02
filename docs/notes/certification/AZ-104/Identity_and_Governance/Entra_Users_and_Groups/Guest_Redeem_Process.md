@@ -13,7 +13,7 @@ The invitation redemption process defines how an external (B2B) user accepts an 
   - **Social ID or unmanaged Azure AD accounts** may be prompted to create a new password
   - **One-Time Passcode (OTP)** flow is used for users without Microsoft identities (if enabled)
 - **Redemption Flow Steps**
-  - Click invite link → Sign in with identity → Accept permissions (if required) → Complete MFA or OTP → Redirect to resource or portal
+  - Click invite link > Sign in with identity > Accept permissions (if required) > Complete MFA or OTP > Redirect to resource or portal
 - **Terms of Use (If Configured)**
   - Guests are prompted to read and accept **Terms of Use** before completing sign-in
   - This is enforced at the time of **first login only**

@@ -63,7 +63,7 @@ sidebar_id: 'mainSidebar'
 - Configure resource locks
   - [Create/Delete, CanNotDelete and ReadOnly locks](./Identity_and_Governance/Subscriptions_and_Governance/Resource_Locks.md)
   - [Inheritance of locks across scopes](./Identity_and_Governance/Subscriptions_and_Governance/Lock_Inheritance.md)
-  - [Lock impact on automation](./Identity_and_Governance/Subscriptions_and_Governance/Automation_Lock_Impact.md)
+  - [Impact of Locks on automation](./Identity_and_Governance/Subscriptions_and_Governance/Automation_Lock_Impact.md)
 - Apply and manage tags on resources
   - [Add/edit tags using portal, CLI, ARM/Bicep](./Identity_and_Governance/Subscriptions_and_Governance/Tags_Basics.md)
   - [Tag inheritance](./Identity_and_Governance/Subscriptions_and_Governance/Tag_Inheritance.md)

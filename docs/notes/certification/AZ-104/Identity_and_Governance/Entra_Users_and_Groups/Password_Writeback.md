@@ -25,16 +25,20 @@ Password writeback enables users in hybrid environments (on-premises Active Dire
   - Entra Connect sync account must have **"Reset password"** permissions in AD
   - Ensure proper **firewall and connectivity** between cloud and on-prem environments (port 443)
 - **SSPR Flow with Writeback**
-  - User forgets password → navigates to [https://aka.ms/sspr](https://aka.ms/sspr)
+  - User forgets password > navigates to [https://aka.ms/sspr](https://aka.ms/sspr)
   - Passes authentication challenge
   - New password is validated and written back to **on-prem AD**
   - Sync confirms success to the user
 - **Audit & Monitoring**
   - Events appear in both **Microsoft Entra Audit Logs** and **on-prem Event Viewer (Azure AD Connect)**
   - Look for `Password reset via self-service` events
-- **Best Practices**
-  - Start with a **pilot group** before rolling out broadly
-  - Validate permissions and firewall connectivity during setup
-  - Combine with Conditional Access to enforce secure reset conditions (e.g., MFA)
+
+:::note[Best Practices]
+
+- Start with a **pilot group** before rolling out broadly
+- Validate permissions and firewall connectivity during setup
+- Combine with Conditional Access to enforce secure reset conditions (e.g., MFA)
+
+:::
 
 Additional Reading: [Enable cloud sync self-service password reset writeback to an on-premises environment](https://learn.microsoft.com/en-us/entra/identity/authentication/tutorial-enable-cloud-sync-sspr-writeback)

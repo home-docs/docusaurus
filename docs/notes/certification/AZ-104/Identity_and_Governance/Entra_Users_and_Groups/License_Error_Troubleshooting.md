@@ -32,13 +32,17 @@ License assignment errors in Microsoft Entra ID typically occur when a user can'
   - Confirm `UsageLocation` is set (required for license enforcement)
   - Remove overlapping or conflicting license paths
   - Reprocess group membership if needed
-- **Best Practices**
-  - Assign licenses via dedicated groups (one SKU per group)
-  - Keep service plan selections consistent
-  - Monitor license utilization regularly
-  - Use `AlternateNotificationEmails` for admin alerts if group owners aren't available
 - **Auditing and Reporting**
   - Use Microsoft Entra's **Audit Logs*- to track assignment events
   - License errors can be exported and reviewed with Excel or Power BI for batch analysis
+
+:::note[Best Practices]
+
+- Assign licenses via dedicated groups (one SKU per group)
+- Keep service plan selections consistent
+- Monitor license utilization regularly
+- Use `AlternateNotificationEmails` for admin alerts if group owners aren't available
+
+:::
 
 Additional Reading: [Identify and resolve license assignment problems for a group in the Microsoft 365 Admin Portal](https://learn.microsoft.com/en-us/entra/fundamentals/licensing-groups-resolve-problems)

@@ -47,9 +47,13 @@ Permissions assigned at a **higher scope** are inherited by all **child scopes**
 - **Use AssignableScopes in Custom Roles**
   - When creating custom roles, define where they can be assigned via `AssignableScopes`
   - Example: Restrict a role to a single resource group
-- **Best Practices**
-  - **Prefer lower scopes** for granular control
-  - Avoid assigning high-privilege roles (e.g., Owner) at subscription or management group unless needed
-  - Use **naming conventions** and tagging to track scoped assignments
+
+:::note[Best Practices]
+
+- **Prefer lower scopes** for granular control
+- Avoid assigning high-privilege roles (e.g., Owner) at subscription or management group unless needed
+- Use **naming conventions** and tagging to track scoped assignments
+
+:::
 
 Additional Reading: [Understand scope for Azure RBAC](https://learn.microsoft.com/en-us/azure/role-based-access-control/scope-overview)

@@ -6,7 +6,7 @@ Group expiration policies in Microsoft Entra ID help manage the lifecycle of Mic
 
 - **Scope of Expiration Policy**
   - Applies **only to Microsoft 365 groups**, not Security groups
-  - Targeted via **Microsoft Entra ID → Groups → Expiration**
+  - Targeted via **Microsoft Entra ID > Groups > Expiration**
   - Affects associated resources like Teams, Planner, SharePoint
 - **Configurable Settings**
   - **Expiration period**: Default is 180 days (can be changed)

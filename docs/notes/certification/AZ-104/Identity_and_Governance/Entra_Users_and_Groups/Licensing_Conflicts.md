@@ -29,11 +29,6 @@ Licensing conflicts in Microsoft Entra ID occur when a user cannot be assigned a
   Get-MgUserLicenseDetail -UserId user@contoso.com
   ```
 
-- **Best Practices to Avoid Conflicts**
-  - Use dedicated groups per license SKU
-  - Assign licenses to groups only after confirming capacity
-  - Disable unused services consistently across all license paths
-  - Regularly audit group memberships and license states
 - **Audit and Alerts**
   - Conflicts and errors are logged in **Audit Logs**
   - Use Microsoft Entra reports to export license state across the tenant
@@ -44,4 +39,12 @@ Licensing conflicts in Microsoft Entra ID occur when a user cannot be assigned a
     - Edit the license assignment to remove problematic service plans
     - Convert to direct assignment if more granular control is needed
 
+:::note[Best Practices to Avoid Conflicts]
+
+- Use dedicated groups per license SKU
+- Assign licenses to groups only after confirming capacity
+- Disable unused services consistently across all license paths
+- Regularly audit group memberships and license states
+
+:::
 Additional Reading: [Identify and resolve license assignment problems for a group in the Microsoft 365 Admin Portal](https://learn.microsoft.com/en-us/entra/fundamentals/licensing-groups-resolve-problems)
