@@ -101,11 +101,11 @@ const educationHistory = [
 
 const certificationsList = [
   {
-    name: 'Professional Scrum Master I (PSM I)',
-    issuer: 'Scrum.org',
-    thumbnailUrl: 'https://scrumorg-website-prod.s3.amazonaws.com/drupal/inline-images/2022-09/asset_44psmi_0.png',
-    badgeUrl: 'https://www.credly.com/badges/3010c0bf-8ac9-4659-b798-497421f995ae/public_url',
-    altText: 'Professional Scrum Master I Badge'
+    name: 'Microsoft Certified: Azure Administrator (AZ-104)',
+    issuer: 'Microsoft',
+    thumbnailUrl: 'https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-associate-badge.svg?branch=main',
+    badgeUrl: 'https://learn.microsoft.com/api/credentials/share/en-us/marathenikhil28/DD9AFC8B97C19188?sharingId=43ED59A1D003A46B',
+    altText: 'Microsoft Certified Azure Administrator Badge'
   },
   {
     name: 'Microsoft Certified: Azure Fundamentals (AZ-900)',
@@ -113,6 +113,13 @@ const certificationsList = [
     thumbnailUrl: 'https://learn.microsoft.com/ja-jp/media/learn/certification/badges/microsoft-certified-fundamentals-badge.svg',
     badgeUrl: 'https://learn.microsoft.com/api/credentials/share/en-in/marathenikhil28/65954A8186F59E98?sharingId=43ED59A1D003A46B',
     altText: 'Microsoft Certified Azure Fundamentals Badge'
+  },
+  {
+    name: 'Professional Scrum Master I (PSM I)',
+    issuer: 'Scrum.org',
+    thumbnailUrl: 'https://scrumorg-website-prod.s3.amazonaws.com/drupal/inline-images/2022-09/asset_44psmi_0.png',
+    badgeUrl: 'https://www.credly.com/badges/3010c0bf-8ac9-4659-b798-497421f995ae/public_url',
+    altText: 'Professional Scrum Master I Badge'
   },
 ];
 
@@ -133,7 +140,7 @@ export default function ResumePage(): ReactNode {
               {siteConfig.title} {/* This will be "Nikhil Upendra Marathe" */}
             </Heading>
             <p className={styles.profileTitle}>
-              Tech Leader | DevOps | Professional Scrum Master {/* Or your preferred title */}
+              Tech Leader | Microsoft Certified: Azure Administrator | Professional Scrum Master {/* Or your preferred title */}
             </p>
           </div>
           <div className={styles.profileImageContainer}>
