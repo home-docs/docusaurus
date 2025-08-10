@@ -234,28 +234,30 @@ export default function ResumePage(): ReactNode {
           </Heading>
           <div className={styles.certificationsContainer}>
             {certificationsList.map((cert, index) => (
-              <div key={index} className={styles.certificationEntry}>
-                {cert.thumbnailUrl && cert.badgeUrl && (
-                  <a
-                    href={cert.badgeUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.certificationLink}
-                  >
+              cert.badgeUrl ? (
+                <a
+                  key={index}
+                  href={cert.badgeUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.certificationEntry}
+                  style={{ textDecoration: 'none', color: 'inherit' }}
+                >
+                  {cert.thumbnailUrl && (
                     <img
                       src={cert.thumbnailUrl}
                       alt={cert.altText || `${cert.name} badge`}
                       className={styles.certificationThumbnail}
                     />
-                  </a>
-                )}
-                <div className={styles.certificationInfo}>
-                  <Heading as="h3" className={styles.certificationName}>
-                    {cert.name}
-                  </Heading>
-                  <p className={styles.certificationIssuer}>Issued by: {cert.issuer}</p>
-                </div>
-              </div>
+                  )}
+                  <div className={styles.certificationInfo}>
+                    <Heading as="h3" className={styles.certificationName}>
+                      {cert.name}
+                    </Heading>
+                    <p className={styles.certificationIssuer}>Issued by: {cert.issuer}</p>
+                  </div>
+                </a>
+              ) : null
             ))}
           </div>
         </section>
