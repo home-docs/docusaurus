@@ -83,24 +83,116 @@ li > p {
 
 
 /* ===============================
-   Navbar Styling
+   Glass Navbar Styling
    =============================== */
 
 .navbar {
   position: fixed;
   top: 1rem;
-  left: 50%;
-  width: 90%;
-  border-radius: 12px;
-  background-color: rgba(var(--ifm-background-color-rgb), 0.95);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(var(--ifm-color-emphasis-300), 0.3);
-  transform: translateX(-50%);
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  transform: none;
   transition: transform 0.3s ease-in-out;
+  background: none;
+  box-shadow: none;
+  border: none;
+  backdrop-filter: none;
+  padding: 0.5rem;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
 }
 
-.navbar--hidden {
-  transform: translateX(-50%) translateY(-120%);
+
+.navbar-glass-surface {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  min-height: 60px;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.navbar-glass-surface .navbar__inner {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-glass-surface .navbar__items {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar-glass-surface .navbar__items--right {
+  justify-content: flex-end;
+}
+
+.navbar-glass-surface .navbar__logo {
+  max-height: 40px;
+  width: auto;
+}
+
+.navbar-glass-surface .navbar__title {
+  font-size: 1.1rem;
+  margin-left: 0.5rem;
+  font-weight: 600;
+  color: inherit;
+}
+
+.navbar-glass-surface .navbar__item {
+  color: inherit;
+}
+
+.navbar-glass-surface .navbar__link {
+  color: inherit;
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.navbar-glass-surface .navbar__link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: inherit;
+}
+
+[data-theme='dark'] .navbar-glass-surface .navbar__link:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.navbar-fallback {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  min-height: 60px;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.navbar-fallback .navbar__inner {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-fallback .navbar__items {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar-fallback .navbar__items--right {
+  justify-content: flex-end;
 }
 
 .main-wrapper {
