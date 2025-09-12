@@ -17,18 +17,30 @@ export default function Navbar(): ReactNode {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
+  if (isMobile) {
+    return (
+      <nav className="navbar navbar--fixed-top">
+        <NavbarContent />
+      </nav>
+    );
+  }
+
   return (
     <nav
       className="navbar navbar--fixed-top"
       style={{
         position: 'fixed',
-        top: isMobile ? 0 : '1rem',
+        top: '1rem',
         left: 0,
         right: 0,
         zIndex: 1000,
-        padding: isMobile ? '0.25rem' : '0.5rem',
+        padding: '0.5rem',
         justifyContent: 'center',
-        display: 'flex'
+        display: 'flex',
+        background: 'none',
+        boxShadow: 'none',
+        border: 'none',
+        backdropFilter: 'none'
       }}
     >
       <BrowserOnly
@@ -36,55 +48,39 @@ export default function Navbar(): ReactNode {
           <div
             className="navbar-fallback"
             style={{
-              borderRadius: isMobile ? '0' : '12px',
+              borderRadius: '12px',
               background: 'rgba(255, 255, 255, 0.1)',
               backdropFilter: 'blur(11px)',
-              border: isMobile ? 'none' : '1px solid rgba(255, 255, 255, 0.2)',
-              width: isMobile ? '100%' : '90%',
-              maxWidth: isMobile ? 'none' : '1200px'
+              border: '1px solid rgba(255, 255, 255, 0.2)',
+              width: '90%',
+              maxWidth: '1200px'
             }}
           >
             <NavbarContent />
           </div>
         }
       >
-        {() =>
-          isMobile ? (
-            <div
-              className="navbar-mobile-wrapper"
-              style={{
-                width: '100%',
-                background: 'rgba(255, 255, 255, 0.1)',
-                backdropFilter: 'blur(11px)',
-                padding: '0.5rem',
-                display: 'flex',
-                alignItems: 'center'
-              }}
-            >
-              <NavbarContent />
-            </div>
-          ) : (
-            <GlassSurface
-              width="100%"
-              height={60}
-              borderRadius={12}
-              backgroundOpacity={0.1}
-              saturation={1}
-              borderWidth={0.07}
-              brightness={50}
-              opacity={0.93}
-              blur={11}
-              displace={0.5}
-              distortionScale={-180}
-              redOffset={0}
-              greenOffset={10}
-              blueOffset={20}
-              className="navbar-glass-surface"
-            >
-              <NavbarContent />
-            </GlassSurface>
-          )
-        }
+        {() => (
+          <GlassSurface
+            width="100%"
+            height={60}
+            borderRadius={12}
+            backgroundOpacity={0.1}
+            saturation={1}
+            borderWidth={0.07}
+            brightness={50}
+            opacity={0.93}
+            blur={11}
+            displace={0.5}
+            distortionScale={-180}
+            redOffset={0}
+            greenOffset={10}
+            blueOffset={20}
+            className="navbar-glass-surface"
+          >
+            <NavbarContent />
+          </GlassSurface>
+        )}
       </BrowserOnly>
     </nav>
   );
