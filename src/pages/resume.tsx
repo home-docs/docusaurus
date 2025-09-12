@@ -10,7 +10,19 @@ import styles from './resume.module.css';
 const professionalSummaryText = `A hands-on technology leader with over 12 years of experience specializing in DevOps, process automation, and infrastructure transformation. Proven track record of enhancing efficiency by re-architecting systems to run 95% faster and reducing daily support tickets by over 75%. Successfully led a DevOps and RPA transformation, creating over 40 automations and enabling a team of 5 to manage a workload previously requiring more than 10 engineers. Proficient in modern cloud and automation tools including Azure, Terraform, Ansible, .NET and PowerShell`;
 
 const skillsList = [
-  'Microsoft Azure', 'Terraform', 'Ansible', 'JIRA', '.NET', 'C#', 'WPF', 'MVVM', 'MS SQL Server', 'Oracle', 'PowerShell', 'BluePrism RPA', 'Docker'
+  'Microsoft Azure',
+  'Terraform',
+  'Ansible',
+  'JIRA',
+  '.NET',
+  'C#',
+  'WPF',
+  'MVVM',
+  'MS SQL Server',
+  'Oracle',
+  'PowerShell',
+  'BluePrism RPA',
+  'Docker',
 ];
 
 const workHistory = [
@@ -54,7 +66,7 @@ const workHistory = [
         title: 'Senior Analyst (SDE II)',
         dates: 'March 2017 – October 2018',
         responsibilities: [
-          'Played a hybrid role developing and maintaining a core component of the \'Direct Commerce\' platform for global magazine distribution.',
+          "Played a hybrid role developing and maintaining a core component of the 'Direct Commerce' platform for global magazine distribution.",
           'Generated actionable reports for business units using data from Oracle and other applications to guide decision-making.',
           'Collaborated with development teams to implement new features and resolve technical issues.',
         ],
@@ -70,7 +82,7 @@ const workHistory = [
         dates: 'April 2014 – March 2017',
         responsibilities: [
           'Optimized SQL queries for key financial reports, reducing run-time from over 4 minutes to under 10 seconds.',
-          'Developed \'Easy Restore\', a custom tool that streamlined the database restore process from several hours to under 15 minutes for large 50GB+ databases.',
+          "Developed 'Easy Restore', a custom tool that streamlined the database restore process from several hours to under 15 minutes for large 50GB+ databases.",
           'Designed and deployed a WPF application using the MVVM architectural pattern, ensuring a clean and maintainable codebase.',
         ],
       },
@@ -103,28 +115,33 @@ const certificationsList = [
   {
     name: 'Microsoft Certified: Azure Administrator (AZ-104)',
     issuer: 'Microsoft',
-    thumbnailUrl: 'https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-associate-badge.svg?branch=main',
-    badgeUrl: 'https://learn.microsoft.com/api/credentials/share/en-us/marathenikhil28/DD9AFC8B97C19188?sharingId=43ED59A1D003A46B',
-    altText: 'Microsoft Certified Azure Administrator Badge'
+    thumbnailUrl:
+      'https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-associate-badge.svg?branch=main',
+    badgeUrl:
+      'https://learn.microsoft.com/api/credentials/share/en-us/marathenikhil28/DD9AFC8B97C19188?sharingId=43ED59A1D003A46B',
+    altText: 'Microsoft Certified Azure Administrator Badge',
   },
   {
     name: 'Microsoft Certified: Azure Fundamentals (AZ-900)',
     issuer: 'Microsoft',
-    thumbnailUrl: 'https://learn.microsoft.com/ja-jp/media/learn/certification/badges/microsoft-certified-fundamentals-badge.svg',
-    badgeUrl: 'https://learn.microsoft.com/api/credentials/share/en-in/marathenikhil28/65954A8186F59E98?sharingId=43ED59A1D003A46B',
-    altText: 'Microsoft Certified Azure Fundamentals Badge'
+    thumbnailUrl:
+      'https://learn.microsoft.com/ja-jp/media/learn/certification/badges/microsoft-certified-fundamentals-badge.svg',
+    badgeUrl:
+      'https://learn.microsoft.com/api/credentials/share/en-in/marathenikhil28/65954A8186F59E98?sharingId=43ED59A1D003A46B',
+    altText: 'Microsoft Certified Azure Fundamentals Badge',
   },
   {
     name: 'Professional Scrum Master I (PSM I)',
     issuer: 'Scrum.org',
-    thumbnailUrl: 'https://scrumorg-website-prod.s3.amazonaws.com/drupal/inline-images/2022-09/asset_44psmi_0.png',
+    thumbnailUrl:
+      'https://scrumorg-website-prod.s3.amazonaws.com/drupal/inline-images/2022-09/asset_44psmi_0.png',
     badgeUrl: 'https://www.credly.com/badges/3010c0bf-8ac9-4659-b798-497421f995ae/public_url',
-    altText: 'Professional Scrum Master I Badge'
+    altText: 'Professional Scrum Master I Badge',
   },
 ];
 
 export default function ResumePage(): ReactNode {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   const profileImageUrl = useBaseUrl('/img/nikhil_resume_photo.jpeg');
 
   return (
@@ -133,14 +150,14 @@ export default function ResumePage(): ReactNode {
       description={`Professional resume for ${siteConfig.title}. ${professionalSummaryText.substring(0, 160)}...`}
     >
       <main className={styles.resumeMainContent}>
-
         <section className={clsx(styles.resumeSection, styles.profileHeader)}>
           <div className={styles.profileText}>
-            <Heading as="h1" className={styles.profileName}>
+            <Heading as='h1' className={styles.profileName}>
               {siteConfig.title} {/* This will be "Nikhil Upendra Marathe" */}
             </Heading>
             <p className={styles.profileTitle}>
-              Tech Leader | Microsoft Certified: Azure Administrator | Professional Scrum Master {/* Or your preferred title */}
+              Tech Leader | Microsoft Certified: Azure Administrator | Professional Scrum Master{' '}
+              {/* Or your preferred title */}
             </p>
           </div>
           <div className={styles.profileImageContainer}>
@@ -153,14 +170,14 @@ export default function ResumePage(): ReactNode {
         </section>
 
         <section className={styles.resumeSection}>
-          <Heading as="h2" className={styles.sectionHeading}>
+          <Heading as='h2' className={styles.sectionHeading}>
             Professional Summary
           </Heading>
           <p className={styles.summaryText}>{professionalSummaryText}</p>
         </section>
 
         <section className={styles.resumeSection}>
-          <Heading as="h2" className={styles.sectionHeading}>
+          <Heading as='h2' className={styles.sectionHeading}>
             Skills
           </Heading>
           <ul className={styles.skillsList}>
@@ -172,29 +189,23 @@ export default function ResumePage(): ReactNode {
           </ul>
         </section>
 
-        <section className={styles.resumeSection} id="work-history">
-          <Heading as="h2" className={styles.sectionHeading}>
+        <section className={styles.resumeSection} id='work-history'>
+          <Heading as='h2' className={styles.sectionHeading}>
             Work History
           </Heading>
           {workHistory.map((job, jobIndex) => (
             <div key={jobIndex} className={styles.jobEntry}>
-              <Heading
-                as="h3"
-                className={styles.companyName}
-                title={`Dates: ${job.overallDates}`}
-              >
+              <Heading as='h3' className={styles.companyName} title={`Dates: ${job.overallDates}`}>
                 {job.company}
               </Heading>
               {job.roles.map((role, roleIndex) => (
                 <div key={roleIndex} className={styles.jobRole}>
-                  <Heading
-                    as="h4"
-                    className={styles.roleTitle}
-                    title={`Dates: ${role.dates}`}
-                  >
+                  <Heading as='h4' className={styles.roleTitle} title={`Dates: ${role.dates}`}>
                     {role.title}
                   </Heading>
-                  <p className={styles.responsibilitiesLabel}><strong>Responsibilities:</strong></p>
+                  <p className={styles.responsibilitiesLabel}>
+                    <strong>Responsibilities:</strong>
+                  </p>
                   <ul className={styles.responsibilitiesList}>
                     {role.responsibilities.map((responsibility, respIndex) => (
                       <li key={respIndex} className={styles.responsibilityItem}>
@@ -208,17 +219,13 @@ export default function ResumePage(): ReactNode {
           ))}
         </section>
 
-        <section className={styles.resumeSection} id="education">
-          <Heading as="h2" className={styles.sectionHeading}>
+        <section className={styles.resumeSection} id='education'>
+          <Heading as='h2' className={styles.sectionHeading}>
             Education
           </Heading>
           {educationHistory.map((edu, index) => (
             <div key={index} className={styles.educationEntry}>
-              <Heading
-                as="h3"
-                className={styles.degreeName}
-                title={`Dates: ${edu.dates}`}
-              >
+              <Heading as='h3' className={styles.degreeName} title={`Dates: ${edu.dates}`}>
                 {edu.degree}
               </Heading>
               <div className={styles.educationDetails}>
@@ -228,18 +235,18 @@ export default function ResumePage(): ReactNode {
           ))}
         </section>
 
-        <section className={styles.resumeSection} id="certifications">
-          <Heading as="h2" className={styles.sectionHeading}>
+        <section className={styles.resumeSection} id='certifications'>
+          <Heading as='h2' className={styles.sectionHeading}>
             Certifications
           </Heading>
           <div className={styles.certificationsContainer}>
-            {certificationsList.map((cert, index) => (
+            {certificationsList.map((cert, index) =>
               cert.badgeUrl ? (
                 <a
                   key={index}
                   href={cert.badgeUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  target='_blank'
+                  rel='noopener noreferrer'
                   className={styles.certificationEntry}
                   style={{ textDecoration: 'none', color: 'inherit' }}
                 >
@@ -251,14 +258,14 @@ export default function ResumePage(): ReactNode {
                     />
                   )}
                   <div className={styles.certificationInfo}>
-                    <Heading as="h3" className={styles.certificationName}>
+                    <Heading as='h3' className={styles.certificationName}>
                       {cert.name}
                     </Heading>
                     <p className={styles.certificationIssuer}>Issued by: {cert.issuer}</p>
                   </div>
                 </a>
               ) : null
-            ))}
+            )}
           </div>
         </section>
       </main>

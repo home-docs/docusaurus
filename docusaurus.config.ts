@@ -9,7 +9,7 @@ const config: Config = {
   favicon: 'img/nikhil.ico',
 
   // Set the production url of your site here
-  url: 'https://home-docs.github.io',
+  url: 'https://mnik28.dev',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -21,6 +21,16 @@ const config: Config = {
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
+
+  headTags: [
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'algolia-site-verification',
+        content: '386960D2C2258101',
+      },
+    },
+  ],
 
   clientModules: [
     require.resolve('./src/client-modules/navbar-hider.ts'),
@@ -34,6 +44,7 @@ const config: Config = {
     locales: ['en'],
   },
 
+  plugins: ['@docusaurus/plugin-ideal-image'],
   presets: [
     [
       'classic',
@@ -52,6 +63,35 @@ const config: Config = {
   themeConfig: {
     experimental_useViewTransitions: true,
     image: 'img/docusaurus-social-card.jpg',
+    algolia: {
+      // The application ID provided by Algolia
+      appId: 'O3EQL5HHNM',
+
+      // Public API key: it is safe to commit it
+      apiKey: '55294292717d3e0cbf9f917aa0f33b54',
+
+      indexName: 'Algolia Search Crawler',
+
+      // Optional: see doc section below
+      contextualSearch: true,
+
+      // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
+      externalUrlRegex: 'external\\.com|domain\\.com',
+
+      // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.github.io/myDocusaurusSite/
+      // replaceSearchResultPathname: {
+      //   from: '/docs/', // or as RegExp: /\/docs\//
+      //   to: '/',
+      // },
+
+      // Optional: Algolia search parameters
+      searchParameters: {},
+
+      // Optional: path for search page that enabled by default (`false` to disable it)
+      searchPagePath: 'search',
+
+      //... other Algolia params
+    },
     navbar: {
       title: 'Nikhils Docusaurus',
       logo: {

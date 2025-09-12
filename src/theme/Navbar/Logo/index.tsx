@@ -40,39 +40,41 @@ export default function NavbarLogo({ className }: Props): JSX.Element {
   const isHomePage = pathname === baseUrl;
   const displayTitle = isHomePage ? title : 'Home';
 
+  const lightSrc = logo ? useBaseUrl(logo.src) : '';
+  const darkSrc = logo ? useBaseUrl(logo.srcDark ?? logo.src) : '';
+
   if (!logo) {
     return (
-      <Link to="/" className={clsx('navbar__brand', className)}>
+      <Link to='/' className={clsx('navbar__brand', className)}>
         {displayTitle}
       </Link>
     );
   }
 
-  const { src, srcDark, width, height, alt, target, style } = logo;
+  const { width, height, alt, target, style } = logo;
   const sources = {
-    light: useBaseUrl(src),
-    dark: useBaseUrl(srcDark ?? src),
+    light: lightSrc,
+    dark: darkSrc,
   };
 
   return (
     <Link
-      to="/"
+      to='/'
       target={target}
-      aria-label="Home page"
-      className={clsx('navbar__brand', className)}>
-      {src && (
+      aria-label='Home page'
+      className={clsx('navbar__brand', className)}
+    >
+      {logo?.src && (
         <ThemedImage
           sources={sources}
           width={width}
           height={height}
           alt={alt ?? title ?? ''}
-          className="navbar__logo"
+          className='navbar__logo'
           style={style}
         />
       )}
-      {displayTitle != null && (
-        <b className="navbar__title text--truncate">{displayTitle}</b>
-      )}
+      {displayTitle != null && <b className='navbar__title text--truncate'>{displayTitle}</b>}
     </Link>
   );
 }

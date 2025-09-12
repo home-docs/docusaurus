@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+
+# Production
+build/
+
+# Generated files
+.docusaurus/
+.cache-loader/
+
+# Package files
+package-lock.json
+yarn.lock
+
+# Config files that should maintain their format
+*.md
+*.mdx
