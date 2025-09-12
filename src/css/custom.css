@@ -1,11 +1,8 @@
 /*
  * Docusaurus Custom Styles
- * Last updated: 2025-08-01
 */
 
-/* ===============================
-   Theme Color Variables
-   =============================== */
+/* --- Theme Color Variables --- */
 
 :root {
   --ifm-color-primary: #172554;
@@ -24,7 +21,7 @@
   --ifm-navbar-height: 80px;
   --ifm-global-radius: 12px;
 
-  /* Tailwind v4 Colors (Light Mode) */
+  /* --- Tailwind v4 Colors (Light Mode) --- */
   --h1-color: #312c85;
   --h2-color: #2f0d68;
   --h3-color: #3c0366;
@@ -45,7 +42,7 @@
   --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.12);
   --ifm-card-background-color: #424242;
 
-  /* Tailwind v4 Colors (Dark Mode) */
+  /* --- Tailwind v4 Colors (Dark Mode) --- */
   --h1-color: #615fff;
   --h2-color: #8e51ff;
   --h3-color: #ad46ff;
@@ -55,9 +52,7 @@
   --strong-color: #ff82b2;
 }
 
-/* ===============================
-   Header and Text Styling
-   =============================== */
+/* --- Scoped styles for headers and bold text in docs --- */
 
 .plugin-docs h1 { color: var(--h1-color); }
 .plugin-docs h2 { color: var(--h2-color); }
@@ -67,6 +62,7 @@
 .plugin-docs h6 { color: var(--h6-color); }
 .plugin-docs strong { color: var(--strong-color); }
 
+/*Fix for random empty lines in bullet lists*/
 li > p {
   margin-block-start: 0;
   margin-block-end: 0;
@@ -83,9 +79,7 @@ li > p {
 }
 
 
-/* ===============================
-   Glass Navbar Styling
-   =============================== */
+/* --- Glass Navbar Styles --- */
 
 .navbar {
   position: fixed;
@@ -200,9 +194,7 @@ li > p {
   padding-top: calc(var(--ifm-navbar-height) + 2rem);
 }
 
-/* ===============================
-   Hero Section (Homepage)
-   =============================== */
+/* --- Homepage Hero Section --- */
 
 .hero.hero--primary {
   width: 90%;
@@ -241,9 +233,7 @@ li > p {
   opacity: 1;
 }
 
-/* ===============================
-   Card Styling
-   =============================== */
+/* --- Card Styles --- */
 
 .col .card {
   height: 100%;
@@ -264,57 +254,9 @@ li > p {
   box-shadow: var(--ifm-global-shadow-lw);
 }
 
-/* ===============================
-   Sidebar Styling
-   =============================== */
 
-/* Sidebar link text */
-.menu__link,
-.menu__list-item > .menu__link--sublist {
-  font-size: 14px;
-  font-weight: normal;
-}
-
-/* Remove arrows (collapse/expand carets) */
-.menu__caret,
-.menu__link--sublist-caret {
-  display: none !important;
-}
-
-/* Sidebar indentation levels */
-.menu__list-item,
-.menu__link {
-  padding-left: 0 !important;
-}
-
-/* Level 1 indent */
-.menu__list > .menu__list-item,
-.menu__list > .menu__list-item > .menu__link {
-  padding-left: 0.5rem;
-}
-
-/* Level 2 indent */
-.menu__list .menu__list > .menu__list-item,
-.menu__list .menu__list > .menu__list-item > .menu__link {
-  padding-left: 1rem;
-}
-
-/* Level 3 indent */
-.menu__list .menu__list .menu__list > .menu__list-item,
-.menu__list .menu__list .menu__list > .menu__list-item > .menu__link {
-  padding-left: 1.5rem;
-}
-
-/* Sidebar transitions (graceful open/close animations) */
-.menu__list,
-.menu__list-item,
-.menu__link {
-  transition: all 0.3s ease-in-out;
-}
-
-/* ===============================
-   Page Transitions (View API)
-   =============================== */
+/* --- Global Page & Theme Transition --- */
+/* Uses the experimental View Transitions API */
 
 ::view-transition-old(root) {
   animation: 300ms cubic-bezier(0.4, 0, 0.2, 1) both docusaurus-fade-out;
