@@ -22,6 +22,7 @@
   --ifm-card-border-color: #e5e7eb;
   --ifm-card-box-shadow: var(--ifm-global-shadow-xs);
   --ifm-navbar-height: 80px;
+  --ifm-global-radius: 12px;
 
   /* Tailwind v4 Colors (Light Mode) */
   --h1-color: #312c85;
@@ -204,7 +205,8 @@ li > p {
    =============================== */
 
 .hero.hero--primary {
-  width: 76.2%;
+  width: 90%;
+  max-width: 1200px;
   margin: 0 auto 1.5rem auto;
   border-radius: 12px;
   position: relative;

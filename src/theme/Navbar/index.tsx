@@ -20,7 +20,7 @@ export default function Navbar(): ReactNode {
           <div
             className="navbar-fallback"
             style={{
-              borderRadius: '50px',
+              borderRadius: '12px',
               background: 'rgba(255, 255, 255, 0.1)',
               backdropFilter: 'blur(11px)',
               border: '1px solid rgba(255, 255, 255, 0.2)'
@@ -34,7 +34,7 @@ export default function Navbar(): ReactNode {
           <GlassSurface
             width="100%"
             height={60}
-            borderRadius={50}
+            borderRadius={12}
             backgroundOpacity={0.1}
             saturation={1}
             borderWidth={0.07}

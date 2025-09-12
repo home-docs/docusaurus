@@ -51,33 +51,26 @@ export default function Home(): ReactNode {
       </header>
 
       <main>
-        <div className='container padding-vert--lg'>
-          <div className='row' style={{ justifyContent: 'center' }}>
+        <div className='container padding-vert--lg' style={{ maxWidth: '90%', width: '1200px' }}>
+          <div className='row' style={{ justifyContent: 'center', gap: '2rem' }}>
             <FeatureCard
-              className='col--4' // Adjusted width to 4 columns
+              className='col--5'
               title='Home Lab'
               description='Explore the hardware, software, and configurations of my personal home lab setup.'
               linkTo='/docs/home-lab'
               icon='🎛️'
             />
             <FeatureCard
-              className='col--4' // Adjusted width to 4 columns
+              className='col--5'
               title='Tools & Tech'
-              description='Discover guides and notes on Docusaurus, GitHub, Ansible, and other tools.'
+              description='Discover guides on Docusaurus, GitHub, Ansible, and other tools.'
               linkTo='/docs/tools-technologies'
               icon='🛠️'
-            />
-            <FeatureCard
-              className='col--4' // Adjusted width to 4 columns
-              title='Notes'
-              description='A collection of my notes for various topics, including certifications.'
-              linkTo='/docs/notes'
-              icon='📝'
             />
           </div>
         </div>
 
-        <div className='container text--center padding-vert--lg'>
+        <div className='container text--center padding-vert--lg' style={{ maxWidth: '90%', width: '1200px' }}>
           <Heading as='h2'>My Favorite Tools</Heading>
           <div
             className='row'
