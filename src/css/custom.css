@@ -162,6 +162,59 @@ li > p {
   background-color: rgba(255, 255, 255, 0.05);
 }
 
+.navbar-glass-surface .navbar__toggle {
+  color: inherit;
+}
+
+.navbar-glass-surface .navbar__toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme='dark'] .navbar-glass-surface .navbar__toggle:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.navbar-mobile-wrapper {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(11px);
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-mobile-wrapper .navbar__inner {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-mobile-wrapper .navbar__items {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navbar-mobile-wrapper .navbar__toggle {
+  color: inherit;
+}
+
+.navbar-mobile-wrapper .navbar__toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme='dark'] .navbar-mobile-wrapper {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(11px) saturate(1.8) brightness(1.2);
+}
+
+[data-theme='dark'] .navbar-mobile-wrapper .navbar__toggle:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
 .navbar-fallback {
   display: flex;
   align-items: center;
@@ -192,6 +245,61 @@ li > p {
 
 .main-wrapper {
   padding-top: calc(var(--ifm-navbar-height) + 2rem);
+}
+
+@media screen and (max-width: 996px) {
+  .navbar {
+    padding: 0.25rem;
+    top: 0;
+  }
+  
+  .navbar-glass-surface {
+    width: 100%;
+    max-width: none;
+    padding: 0.5rem;
+    min-height: 50px;
+  }
+  
+  .navbar-glass-surface .navbar__items {
+    gap: 0.5rem;
+  }
+  
+  .navbar-glass-surface .navbar__items--right .navbar__item {
+    display: none;
+  }
+  
+  .navbar-glass-surface .navbar__toggle {
+    display: flex !important;
+  }
+  
+  .main-wrapper {
+    padding-top: calc(50px + 1rem);
+  }
+  
+  .navbar-sidebar {
+    background-color: var(--ifm-navbar-background-color);
+    backdrop-filter: blur(12px) saturate(1.8) brightness(1.1);
+  }
+  
+  .navbar-sidebar__backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  
+  .navbar-sidebar__brand {
+    background-color: var(--ifm-navbar-background-color);
+  }
+  
+  .navbar-sidebar__items {
+    padding: 0.5rem;
+  }
+  
+  .navbar-sidebar__item {
+    margin: 0.25rem 0;
+  }
+  
+  [data-theme='dark'] .navbar-sidebar {
+    backdrop-filter: blur(12px) saturate(1.8) brightness(1.2);
+  }
 }
 
 /* --- Homepage Hero Section --- */

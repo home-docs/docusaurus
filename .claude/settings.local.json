@@ -8,7 +8,8 @@
       "Bash(npx imagemin:*)",
       "Bash(imagemin:*)",
       "WebFetch(domain:reactbits.dev)",
-      "Bash(npm start)"
+      "Bash(npm start)",
+      "Bash(npm run typecheck:*)"
     ],
     "deny": [],
     "ask": []
