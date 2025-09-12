@@ -4,30 +4,33 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
+import Magnet from '../components/Magnet';
 
 function FeatureCard({ title, description, linkTo, icon, linkText = 'Explore', className }) {
   return (
     <div className={clsx('col margin-bottom--lg', className)}>
-      <div className='card' style={{ height: '100%' }}>
-        <div className='card__header'>
-          {icon && (
-            <div className='card__icon' style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>
-              {icon}
+      <Magnet padding={50} magnetStrength={8} disabled={false}>
+        <div className='card' style={{ height: '100%' }}>
+          <div className='card__header'>
+            {icon && (
+              <div className='card__icon' style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>
+                {icon}
+              </div>
+            )}
+            <Heading as='h3'>{title}</Heading>
+          </div>
+          <div className='card__body'>
+            <p>{description}</p>
+          </div>
+          {linkTo && (
+            <div className='card__footer'>
+              <Link className='button button--secondary button--block' to={linkTo}>
+                {linkText}
+              </Link>
             </div>
           )}
-          <Heading as='h3'>{title}</Heading>
         </div>
-        <div className='card__body'>
-          <p>{description}</p>
-        </div>
-        {linkTo && (
-          <div className='card__footer'>
-            <Link className='button button--secondary button--block' to={linkTo}>
-              {linkText}
-            </Link>
-          </div>
-        )}
-      </div>
+      </Magnet>
     </div>
   );
 }
