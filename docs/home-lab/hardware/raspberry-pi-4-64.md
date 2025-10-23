@@ -88,3 +88,72 @@ ssh username@192.168.1.1
 ```
 
 :::
+
+### Software Installation
+
+#### System utilities and development tools
+
+The following apps can be installed using `apt`.
+
+* **tree:** Useful to view folder structures (Also used by claude when discovering code structure).
+* **btop:** Alternative to htop. I like how this looks.
+* **git:** To track and sync code changes.
+* **npm:** npm is needed to install Claude.
+* **pipx:** pipx is the recommended method to install Ansible (As opposed to the old python3 method)
+
+```bash title="bash"
+sudo apt install tree
+
+sudo apt install btop
+
+sudo apt install git
+
+sudo apt install npm
+
+sudo apt install pipx
+```
+
+#### IaC Tools
+
+##### Ansible
+
+Install Ansible and its dependencies using `pipx` (Do not run the following commands as sudo).
+
+```bash title="bash"
+pipx install --include-deps ansible
+```
+
+##### OpenTofu
+
+Install OpenTofu using the official installation script.
+
+```bash title="bash"
+# Download the installer script:
+curl --proto '=https' --tlsv1.2 -fsSL https://get.opentofu.org/install-opentofu.sh -o install-opentofu.sh
+
+# Alternatively: wget --secure-protocol=TLSv1_2 --https-only https://get.opentofu.org/install-opentofu.sh -O install-opentofu.sh
+
+# Give it execution permissions:
+chmod +x install-opentofu.sh
+
+# Please inspect the downloaded script
+
+# Run the installer:
+./install-opentofu.sh --install-method deb
+
+# Remove the installer:
+rm -f install-opentofu.sh
+
+```
+
+#### Directory Structure
+
+##### Project Folders
+
+* Create a `source` directory in the user's home folder to act as the main workspace.
+* Create an `AI` subdirectory within `source`. This folder will be the initialization path for AI tools like Claude which ensures that all AI related files are kept separate and do not get checked in to veersion control.
+
+```bash title="Bash"
+mkdir ~/source
+mkdir ~/source/AI
+```
