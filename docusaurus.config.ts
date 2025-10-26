@@ -20,7 +20,6 @@ const config: Config = {
   projectName: 'docusaurus', // Usually your repo name.
 
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
 
   headTags: [
     {
@@ -51,6 +50,9 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
+          mdxFrontMatterValidation: {
+            frontMatter: 'ignore',
+          },
         },
         blog: false,
         theme: {

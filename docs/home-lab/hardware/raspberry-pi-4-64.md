@@ -177,8 +177,6 @@ cd ~/source
 git clone <your-git-repository-url>
 ```
 
-## References
-
 [^1]: [Ansible Installation Guide](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#pipx-install)
 
 [^2]: [OpenTofu Installation Guide](https://opentofu.org/docs/intro/install/deb/)
