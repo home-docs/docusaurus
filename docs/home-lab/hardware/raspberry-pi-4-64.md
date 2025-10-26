@@ -7,7 +7,7 @@ slug: /home-lab/hardware/raspberry-pi-4-64
 
 ## Raspberry Pi Setup: Network Connector and IaC Control Node
 
-**Boot Media**: We will use a Samsung 128GB SATA SSD in a Orico USB3.0 case.
+**Boot Media**: We will use a Samsung 128GB SATA SSD in an Orico USB 3.0 case.
 
 ### OS Selection
 
@@ -22,17 +22,17 @@ Download and install the Raspberry Pi Imager from the [raspberry pi software sit
 #### Optional but Recommended: Update EEPROM
 
 This Pi had been in operation for over a year running Home Assistant OS. The EEPROM was an older version which always gave me trouble with USB3.0 boot (Although booting from USB2.0 worked just fine).
-The latest USB EEPROM image (August 2025 at the time of this document) fixed the USB3.0 boot issue.
+The latest USB EEPROM image available at the time of writing (August 2025) fixed the USB3.0 boot issue.
 
 * In the imager, select the EEPROM update image (`Choose OS -> Misc Utility Images -> Raspberry PI 4 -> USB Boot`).
 * Flash the image to a separate SD card or USB Drive (An SD card is recommended as that is the default boot media but USB drive worked just as well in this case).
 * Disconnect the power, insert the update media (USB drive/SD Card) and connect power.
-* The Red 🔴 and Green 🟢 LED's will flash steadily during the update (Should take around 10 mins).
-* The update is complete when the Green 🟢 LED flashes rapidly in a steady pattern. Power Off the Pi and remove the update media.
+* The Red and Green LEDs will flash steadily during the update (Should take around 10 mins).
+* The update is complete when the Green LED flashes rapidly in a steady pattern. Power Off the Pi and remove the update media.
 
 #### Installing the OS
 
-The process for installing the OS remains the same regardless what OS we use as long as we are using the Raspberry Pi Imager.
+The OS installation process is the same regardless of which OS you choose when using Raspberry Pi Imager.
 
 * Open the imager and select `Raspberry Pi 4` under `Choose Device`.
 * Select **Raspberry Pi OS Lite (64-Bit)** under `Choose OS -> Raspberry Pi OS (Other) -> Raspberry Pi OS Lite (64-Bit)`.
@@ -64,27 +64,40 @@ It is highly recommended to disable password authentication and configure SSH ke
 
 * Once the imager has finished writing and verifying, safely eject the USB drive.
 * Ensure that the Raspberry Pi is powered off (power cable disconnected).
-* Connect the `USB drive` to one of the USB3.0 ports (the port closer to the board is preferred).
+* Connect the `USB drive` to one of the USB 3.0 ports (the port closer to the board is preferred).
 * Connect the `Ethernet Cable`.
 * Connect the `power cable` to boot the device.
-* **Observe the Green 🟢 LED:** IT will flash irregularly while reading from the drive during boot and then settle into a regular continuous pattern once boot is successful.
-* The device will also appear on the unifi console with its updated hostname.
+* **Observe the Green LED:** It will flash irregularly while reading from the drive during boot and then settle into a regular continuous pattern once boot is successful.
+* The device will also appear on the Unifi console with its updated hostname.
+
+#### Verification
+
+* Verify that the device appears in your Unifi controller with the hostname you configured.
+* Verify that the device has been assigned an IP address by your DHCP server.
+* Ping the device to confirm network connectivity: `ping <hostname>` or `ping <static-ip>`
+* Attempt an SSH connection to confirm remote access is working properly.
 
 ### Initial Device Setup
 
 * **Assign Static IP:** A static IP should be assigned to the device via the Unifi Controller.
 * **Update system:** Log into the device via SSH and perform a full system update.
 
-    ```bash title="bash"
-    sudo apt update && sudo apt upgrade
-    ```
+```bash
+sudo apt update && sudo apt upgrade
+```
 
 :::info
 
-To SSH, open powershell and type `ssh <username from imager>@<static ip of rpi>` enter the password we set in the imager when prompted.
+To SSH into the device, open PowerShell and run the following command, then enter the password you set in the imager when prompted:
 
-```powershell title="powershell-example"
-ssh username@192.168.1.1
+```powershell
+ssh <username>@<static-ip>
+```
+
+For example:
+
+```powershell
+ssh pi@192.168.1.100
 ```
 
 :::
@@ -95,39 +108,31 @@ ssh username@192.168.1.1
 
 The following apps can be installed using `apt`.
 
-* **tree:** Useful to view folder structures (Also used by claude when discovering code structure).
+* **tree:** Useful to view folder structures (Also used by Claude Code when discovering code structure).
 * **btop:** Alternative to htop. I like how this looks.
 * **git:** To track and sync code changes.
-* **npm:** npm is needed to install Claude.
+* **npm:** npm is needed to install Claude Code.
 * **pipx:** pipx is the recommended method to install Ansible (As opposed to the old python3 method)
 
-```bash title="bash"
-sudo apt install tree
-
-sudo apt install btop
-
-sudo apt install git
-
-sudo apt install npm
-
-sudo apt install pipx
+```bash
+sudo apt install tree btop git npm pipx
 ```
 
 #### IaC Tools
 
 ##### Ansible
 
-Install Ansible and its dependencies using `pipx` (Do not run the following commands as sudo).
+Install Ansible and its dependencies using `pipx` (Do not run the following commands as sudo).[^1]
 
-```bash title="bash"
+```bash
 pipx install --include-deps ansible
 ```
 
 ##### OpenTofu
 
-Install OpenTofu using the official installation script.
+Install OpenTofu using the official installation script.[^2]
 
-```bash title="bash"
+```bash
 # Download the installer script:
 curl --proto '=https' --tlsv1.2 -fsSL https://get.opentofu.org/install-opentofu.sh -o install-opentofu.sh
 
@@ -143,7 +148,6 @@ chmod +x install-opentofu.sh
 
 # Remove the installer:
 rm -f install-opentofu.sh
-
 ```
 
 #### Directory Structure
@@ -151,9 +155,30 @@ rm -f install-opentofu.sh
 ##### Project Folders
 
 * Create a `source` directory in the user's home folder to act as the main workspace.
-* Create an `AI` subdirectory within `source`. This folder will be the initialization path for AI tools like Claude which ensures that all AI related files are kept separate and do not get checked in to veersion control.
+* Create an `AI` subdirectory within `source`. This folder will be the initialization path for AI tools like Claude Code, which ensures that all AI related files are kept separate and do not get checked into version control.
 
-```bash title="Bash"
+```bash
 mkdir ~/source
 mkdir ~/source/AI
 ```
+
+### Development Environment Setup
+
+#### VSCode SSH Access
+
+Connect to the Raspberry Pi remotely using the **VSCode Remote - SSH** extension. This allows you to edit files and use a terminal directly on the Pi from within the VSCode interface, eliminating the need to transfer files back and forth between your local machine and the Pi.
+
+#### Clone Project Repository
+
+Clone your project repository from Git into the `~/source` directory. This command will create a new directory with your project name at `~/source/<project-name>`.
+
+```bash
+cd ~/source
+git clone <your-git-repository-url>
+```
+
+##### Footnotes
+
+[^1]: Ansible Installation Guide: <https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#pipx-install>
+
+[^2]: OpenTofu Installation Guide: <https://opentofu.org/docs/intro/install/deb/>
