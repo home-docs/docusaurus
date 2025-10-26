@@ -50,9 +50,6 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          mdxFrontMatterValidation: {
-            frontMatter: 'ignore',
-          },
         },
         blog: false,
         theme: {
