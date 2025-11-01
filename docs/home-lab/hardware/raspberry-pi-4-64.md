@@ -114,6 +114,13 @@ The following apps can be installed using `apt`.
 * **npm:** npm is needed to install Claude Code.
 * **pipx:** pipx is the recommended method to install Ansible (As opposed to the old python3 method)
 
+:::note[npm no longer required for claude code]
+
+As of 1st Nov 2025, npm is no longer required to install claude code with a native installer available: [Claude Code docs](https://docs.claude.com/en/docs/claude-code/overview)
+The current install on this machine used npm.
+
+:::
+
 ```bash
 sudo apt install tree btop git npm pipx
 ```
