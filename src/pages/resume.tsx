@@ -168,8 +168,7 @@ const certificationsList = [
   {
     name: 'Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate',
     issuer: 'Oracle',
-    thumbnailUrl:
-      'https://brm-workforce.oracle.com/pdf/certview/images/OCI2025CAIFA.png',
+    thumbnailUrl: '/img/OCI25AICFAV1.png',
     badgeUrl: 'https://catalog-education.oracle.com/pls/certview/sharebadge?id=4A91CC86156D3DC7AAA0C3EA93A70FB18F76CC07B50C48F5C43B4F851CF15A14',
     altText: 'Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate Badge',
   },
