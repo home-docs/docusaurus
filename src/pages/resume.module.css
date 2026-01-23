@@ -21,6 +21,23 @@
   font-size: 1rem;
 }
 
+.skillsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.skillCategory {
+  margin-bottom: 0.5rem;
+}
+
+.skillCategoryName {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--ifm-color-emphasis-800);
+}
+
 .skillsList {
   list-style: none;
   padding-left: 0;
@@ -36,6 +53,47 @@
   border-radius: 4px;
   /* Example of slightly rounded corners for skill "pills" */
   font-size: 0.9rem;
+}
+
+.projectEntry {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.projectEntry:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.projectName {
+  font-size: 1.3rem;
+  color: var(--ifm-color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.projectName a:hover {
+  text-decoration: underline;
+}
+
+.projectDescription {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+  color: var(--ifm-font-color-base);
+}
+
+.projectHighlightsList {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.projectHighlight {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+  color: var(--ifm-font-color-secondary);
 }
 
 .companyName {

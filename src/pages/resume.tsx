@@ -7,22 +7,29 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 import styles from './resume.module.css';
 
-const professionalSummaryText = `A hands-on technology leader with over 12 years of experience specializing in DevOps, process automation, and infrastructure transformation. Proven track record of enhancing efficiency by re-architecting systems to run 95% faster and reducing daily support tickets by over 75%. Successfully led a DevOps and RPA transformation, creating over 40 automations and enabling a team of 5 to manage a workload previously requiring more than 10 engineers. Proficient in modern cloud and automation tools including Azure, Terraform, Ansible, .NET and PowerShell`;
+const professionalSummaryText = `A hands-on technical leader with 12+ years of experience specializing in legacy system optimization, infrastructure automation, and DevOps transformation. Proven ability to take undocumented, debt-laden systems and transform them into efficient, maintainable infrastructure. Delivered measurable impact across multiple engagements: optimized critical database queries to run 95% faster, reduced daily support tickets by over 75% through systematic root-cause analysis, and extended the operational life of a £800M revenue platform by 5+ years. Skilled at building automation that enables small teams to operate at scale, having created 40+ automations that allowed a team of 5 to manage workloads previously requiring 10+ engineers.`;
 
-const skillsList = [
-  'Microsoft Azure',
-  'Terraform',
-  'Ansible',
-  'JIRA',
-  '.NET',
-  'C#',
-  'WPF',
-  'MVVM',
-  'MS SQL Server',
-  'Oracle',
-  'PowerShell',
-  'BluePrism RPA',
-  'Docker',
+const skillsCategories = [
+  {
+    category: 'Cloud & Infrastructure',
+    skills: ['Microsoft Azure', 'Terraform', 'OpenTofu', 'Ansible', 'Docker', 'Portainer', 'Proxmox'],
+  },
+  {
+    category: 'CI/CD & Automation',
+    skills: ['GitHub Actions', 'Azure DevOps Pipelines', 'PowerShell', 'Bash', 'n8n'],
+  },
+  {
+    category: 'Development',
+    skills: ['.NET', 'C#', 'Python', 'SQL Server', 'Oracle', 'REST APIs'],
+  },
+  {
+    category: 'Networking & Security',
+    skills: ['Tailscale', 'Caddy', 'Cloudflare', 'SSL/TLS Management', 'Bitwarden Secrets Manager'],
+  },
+  {
+    category: 'Practices',
+    skills: ['Infrastructure as Code', 'GitOps', 'Agile/Scrum', 'Technical Documentation'],
+  },
 ];
 
 const workHistory = [
@@ -34,26 +41,29 @@ const workHistory = [
         title: 'DevOps Manager',
         dates: 'September 2023 – April 2025',
         responsibilities: [
-          'Led the transformation of the DevOps and Robotic Process Automation (RPA) teams, introducing Agile methodologies to a reactive workflow.',
-          'Spearheaded the creation of over 40 automations using Azure, Terraform, Ansible, and BluePrism RPA, enabling a team of 5 to manage the workload of 10+',
-          'Remained deeply hands-on, actively coding, resolving complex technical issues, and overhauling significant undocumented infrastructure.',
+          'Led a DevOps team of 6 engineers while providing cross-functional leadership to adjacent teams; participated in hiring decisions for 10+ engineers across the organization',
+          'Transformed a reactive support model into a proactive DevOps practice by introducing Agile methodologies and automation-first culture',
+          'Created 40+ automations spanning infrastructure provisioning (Terraform/Azure), CI/CD pipelines (GitHub Actions, Azure DevOps), and operational tasks (PowerShell modules), enabling a team of 5 to manage workloads previously requiring 10+ engineers',
+          'Remained deeply hands-on: personally refactored critical components of a 20+ year old legacy system comprising 30+ modules and serving 10,000 users on a platform processing £800M in annual revenue',
+          'Architected automation initiatives and developed PowerShell modules for system integration where native connectors were insufficient',
         ],
       },
       {
         title: 'Module Lead',
         dates: 'April 2021 – August 2023',
         responsibilities: [
-          'As a certified Scrum Master, led the team to reduce daily incoming tickets from 15+ down to 2-3 by implementing root-cause analysis and higher code quality standards.',
-          'Managed the full development lifecycle using JIRA, ensuring timely UAT and production deployments while aligning development objectives with business goals.',
-          'Oversaw all code reviews and managed development/service request queues to optimize team efficiency.',
+          'Reduced daily incoming support tickets from 15+ to 2-3 by implementing systematic root-cause analysis and enforcing higher code quality standards',
+          'Managed full development lifecycle using JIRA, coordinating UAT and production deployments while aligning development priorities with business objectives',
+          'Established code review standards and optimized team workflows, improving delivery predictability and reducing production incidents',
         ],
       },
       {
         title: 'Senior Software Engineer',
         dates: 'October 2018 – March 2021',
         responsibilities: [
-          'Enhanced and stabilized the core ERP system by refactoring legacy ASP.NET code, significantly reducing technical debt and improving application stability.',
-          'Developed a PowerShell script to automate a 2+hour manual error-checking process, reducing its runtime to seconds and scheduling it to proactively resolve issues.',
+          'Stabilized core ERP system by refactoring legacy ASP.NET code, significantly reducing technical debt and improving application reliability',
+          'Developed PowerShell automation that reduced a 2+ hour manual error-checking process to seconds, scheduled to run proactively and resolve issues before user impact',
+          'Contributed to extending the operational life of a legacy platform by 5+ years through targeted performance optimizations and technical debt reduction',
         ],
       },
     ],
@@ -63,12 +73,12 @@ const workHistory = [
     overallDates: 'March 2017 – October 2018',
     roles: [
       {
-        title: 'Senior Analyst (SDE II)',
+        title: 'Senior Analyst',
         dates: 'March 2017 – October 2018',
         responsibilities: [
-          "Played a hybrid role developing and maintaining a core component of the 'Direct Commerce' platform for global magazine distribution.",
-          'Generated actionable reports for business units using data from Oracle and other applications to guide decision-making.',
-          'Collaborated with development teams to implement new features and resolve technical issues.',
+          'Maintained and enhanced a core component of the Direct Commerce platform supporting global magazine distribution',
+          'Built analytical reports from Oracle and application data to provide actionable insights for business decision-making',
+          'Collaborated with development teams to implement features and resolve cross-functional technical issues',
         ],
       },
     ],
@@ -79,41 +89,66 @@ const workHistory = [
     roles: [
       {
         title: 'Senior Project Engineer',
-        dates: 'April 2014 – March 2017',
+        dates: 'November 2016 – March 2017',
         responsibilities: [
-          'Optimized SQL queries for key financial reports, reducing run-time from over 4 minutes to under 10 seconds.',
-          "Developed 'Easy Restore', a custom tool that streamlined the database restore process from several hours to under 15 minutes for large 50GB+ databases.",
-          'Designed and deployed a WPF application using the MVVM architectural pattern, ensuring a clean and maintainable codebase.',
+          'Optimized SQL queries for critical financial reports, reducing execution time from over 4 minutes to under 10 seconds (95%+ improvement)',
+          "Developed 'Easy Restore', a custom tool that streamlined database restoration from hours to under 15 minutes for 100GB+ databases",
+          'Designed WPF applications using MVVM architecture, ensuring maintainable and testable codebases',
         ],
       },
       {
         title: 'Project Engineer',
-        dates: 'August 2012 – March 2014',
+        dates: 'August 2012 – November 2016',
         responsibilities: [
-          'Maintained the health and performance of a large-scale e-commerce platform by troubleshooting complex issues with cross-functional teams.',
-          'Provided 24/7 on-call support for critical incidents to ensure system stability.',
+          'Supported a large-scale e-commerce platform, troubleshooting complex issues with cross-functional teams',
+          'Provided 24/7 on-call support for critical incidents, maintaining system stability and availability',
         ],
       },
     ],
   },
 ];
 
+const projectsList = [
+  {
+    name: 'Anterra Infrastructure',
+    link: 'https://github.com/N28M/anterra',
+    description:
+      'Personal Infrastructure as Code project managing homelab and cloud resources using OpenTofu, Ansible, and Docker.',
+    highlights: [
+      'Multi-provider IaC (Cloudflare, Portainer) with Bitwarden Secrets Manager integration for zero-hardcoded credentials',
+      'Automated DNS management via Cloudflare with 20+ records and intelligent proxy rules',
+      'Docker orchestration through Portainer with 10+ self-hosted services (Immich, Jellyfin, n8n, Home Assistant)',
+      'Caddy reverse proxy with automatic HTTPS via Cloudflare DNS-01 challenge',
+      'Systemd service dependencies ensuring container reliability with network storage mounts',
+    ],
+  },
+  {
+    name: 'Portfolio & Technical Blog',
+    link: 'https://mnik28.dev',
+    description:
+      'Personal documentation site built with Docusaurus featuring homelab guides, technical references for Ansible, GitHub, and infrastructure tooling, demonstrating commitment to knowledge sharing and continuous learning.',
+    highlights: [],
+  },
+];
+
 const educationHistory = [
   {
-    degree: 'MTech, Software Engineering',
-    institution: 'BITS Pilani (Wipro WASE Program)',
+    degree: 'Master of Technology (M.Tech), Software Engineering',
+    institution: 'Birla Institute of Technology and Science, Pilani',
+    location: 'Bengaluru, India',
     dates: 'August 2012 – August 2016',
   },
   {
     degree: 'Bachelor of Computer Applications',
-    institution: 'Bangalore University (Seshadripuram College, Bengaluru)',
+    institution: 'Bangalore University, Seshadripuram College',
+    location: 'Bengaluru, India',
     dates: 'June 2009 – April 2012',
   },
 ];
 
 const certificationsList = [
   {
-    name: 'Microsoft Certified: Azure Administrator (AZ-104)',
+    name: 'Microsoft Certified: Azure Administrator Associate (AZ-104)',
     issuer: 'Microsoft',
     thumbnailUrl:
       'https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-associate-badge.svg?branch=main',
@@ -129,6 +164,14 @@ const certificationsList = [
     badgeUrl:
       'https://learn.microsoft.com/api/credentials/share/en-in/marathenikhil28/65954A8186F59E98?sharingId=43ED59A1D003A46B',
     altText: 'Microsoft Certified Azure Fundamentals Badge',
+  },
+  {
+    name: 'Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate',
+    issuer: 'Oracle',
+    thumbnailUrl:
+      'https://brm-workforce.oracle.com/pdf/certview/images/OCI2025CAIFA.png',
+    badgeUrl: 'https://catalog-education.oracle.com/pls/certview/sharebadge?id=4A91CC86156D3DC7AAA0C3EA93A70FB18F76CC07B50C48F5C43B4F851CF15A14',
+    altText: 'Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate Badge',
   },
   {
     name: 'Professional Scrum Master I (PSM I)',
@@ -156,8 +199,7 @@ export default function ResumePage(): ReactNode {
               {siteConfig.title} {/* This will be "Nikhil Upendra Marathe" */}
             </Heading>
             <p className={styles.profileTitle}>
-              Tech Leader | Microsoft Certified: Azure Administrator | Professional Scrum Master{' '}
-              {/* Or your preferred title */}
+              Azure Administrator (AZ-104) | DevOps & Infrastructure Automation
             </p>
           </div>
           <div className={styles.profileImageContainer}>
@@ -180,13 +222,22 @@ export default function ResumePage(): ReactNode {
           <Heading as='h2' className={styles.sectionHeading}>
             Skills
           </Heading>
-          <ul className={styles.skillsList}>
-            {skillsList.map((skill, index) => (
-              <li key={index} className={styles.skillItem}>
-                {skill}
-              </li>
+          <div className={styles.skillsContainer}>
+            {skillsCategories.map((category, catIndex) => (
+              <div key={catIndex} className={styles.skillCategory}>
+                <Heading as='h3' className={styles.skillCategoryName}>
+                  {category.category}
+                </Heading>
+                <ul className={styles.skillsList}>
+                  {category.skills.map((skill, skillIndex) => (
+                    <li key={skillIndex} className={styles.skillItem}>
+                      {skill}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             ))}
-          </ul>
+          </div>
         </section>
 
         <section className={styles.resumeSection} id='work-history'>
@@ -219,6 +270,36 @@ export default function ResumePage(): ReactNode {
           ))}
         </section>
 
+        <section className={styles.resumeSection} id='projects'>
+          <Heading as='h2' className={styles.sectionHeading}>
+            Projects
+          </Heading>
+          {projectsList.map((project, index) => (
+            <div key={index} className={styles.projectEntry}>
+              <Heading as='h3' className={styles.projectName}>
+                <a
+                  href={project.link}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  style={{ textDecoration: 'none', color: 'inherit' }}
+                >
+                  {project.name}
+                </a>
+              </Heading>
+              <p className={styles.projectDescription}>{project.description}</p>
+              {project.highlights.length > 0 && (
+                <ul className={styles.projectHighlightsList}>
+                  {project.highlights.map((highlight, hIndex) => (
+                    <li key={hIndex} className={styles.projectHighlight}>
+                      {highlight}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          ))}
+        </section>
+
         <section className={styles.resumeSection} id='education'>
           <Heading as='h2' className={styles.sectionHeading}>
             Education
@@ -229,7 +310,10 @@ export default function ResumePage(): ReactNode {
                 {edu.degree}
               </Heading>
               <div className={styles.educationDetails}>
-                <p className={styles.institutionName}>{edu.institution}</p>
+                <p className={styles.institutionName}>
+                  {edu.institution}
+                  {edu.location && ` — ${edu.location}`}
+                </p>
               </div>
             </div>
           ))}
